@@ -1,0 +1,87 @@
+{
+  "sample_rate": 48000,
+  "tempo_bpm": 110.0,
+  "lines_per_beat": 4,
+  "rows": 16,
+  "voices": {
+    "kick":  { "kind": "sample", "sample_id": "kick",  "loop_mode": "one_shot" },
+    "snare": { "kind": "sample", "sample_id": "snare", "loop_mode": "one_shot" },
+    "hat":   { "kind": "sample", "sample_id": "hat",   "loop_mode": "one_shot" },
+    "clap":  { "kind": "sample", "sample_id": "clap",  "loop_mode": "one_shot" },
+    "bass":  { "kind": "sine", "default_pan": 0.0 }
+  },
+  "samples": {
+    "kick":  { "path": "../samples/kick.wav"  },
+    "snare": { "path": "../samples/snare.wav" },
+    "hat":   { "path": "../samples/hat.wav"   },
+    "clap":  { "path": "../samples/clap.wav"  }
+  },
+  "tracks": [
+    {
+      "name": "kick",  "voice": "kick",
+      "default_amp": 0.85, "default_pan": 0.0,
+      "default_envelope": { "kind": "gate" },
+      "default_duration_rows": 2.0,
+      "default_fx": [],
+      "cells": [
+        { "row": 0,  "note": 1.0 },
+        { "row": 6,  "note": 1.0 },
+        { "row": 10, "note": 1.0 }
+      ]
+    },
+    {
+      "name": "snare", "voice": "snare",
+      "default_amp": 0.6, "default_pan": 0.0,
+      "default_envelope": { "kind": "gate" },
+      "default_duration_rows": 2.0,
+      "default_fx": [],
+      "cells": [
+        { "row": 4,  "note": 1.0 },
+        { "row": 12, "note": 1.0 }
+      ]
+    },
+    {
+      "name": "clap", "voice": "clap",
+      "default_amp": 0.4, "default_pan": 0.0,
+      "default_envelope": { "kind": "gate" },
+      "default_duration_rows": 2.0,
+      "default_fx": [],
+      "cells": [
+        { "row": 4,  "note": 1.0 },
+        { "row": 12, "note": 1.0 }
+      ]
+    },
+    {
+      "name": "hat", "voice": "hat",
+      "default_amp": 0.3, "default_pan": 0.0,
+      "default_envelope": { "kind": "gate" },
+      "default_duration_rows": 0.5,
+      "default_fx": [],
+      "cells": [
+        { "row": 2,  "note": 1.0 },
+        { "row": 6,  "note": 1.0 },
+        { "row": 10, "note": 1.0 },
+        { "row": 14, "note": 1.0 }
+      ]
+    },
+    {
+      "name": "bass", "voice": "bass",
+      "default_amp": 0.32, "default_pan": 0.0,
+      "default_envelope": { "kind": "exp", "attack": 30, "tau": 3500 },
+      "default_duration_rows": 0.9,
+      "default_fx": [{ "kind": "bitcrush", "bits": 5 }],
+      "cells": [
+        { "row": 0,  "note": "A-2" },
+        { "row": 3,  "note": "A-2" },
+        { "row": 6,  "note": "G-2" },
+        { "row": 8,  "note": "A-2" },
+        { "row": 11, "note": "F-2" },
+        { "row": 14, "note": "E-2" }
+      ]
+    }
+  ],
+  "metadata": {
+    "title": "pattern_sampled",
+    "author": "handmade"
+  }
+}

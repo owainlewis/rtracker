@@ -1,0 +1,5 @@
+/target
+/samples
+*.wav
+!examples/**/*.wav
+.DS_Store

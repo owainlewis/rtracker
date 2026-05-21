@@ -1,0 +1,61 @@
+{
+  "sample_rate": 48000,
+  "duration_samples": 96000,
+  "voices": {
+    "sin": { "kind": "sine", "default_pan": 0.0 },
+    "bell": {
+      "kind": "sine_partials",
+      "partials": [1.0, 2.76, 5.4, 8.93],
+      "amplitudes": [1.0, 0.6, 0.35, 0.2],
+      "default_pan": 0.0
+    },
+    "hiss": { "kind": "noise_bandpass", "q": 8.0, "default_pan": 0.0 }
+  },
+  "samples": {},
+  "events": [
+    {
+      "t": 0,
+      "voice": "sin",
+      "freq": 440.0,
+      "dur": 24000,
+      "amp": 0.4,
+      "pan": -0.4,
+      "envelope": { "kind": "ad", "attack": 240, "decay": 23760 },
+      "fx": []
+    },
+    {
+      "t": 24000,
+      "voice": "bell",
+      "freq": 220.0,
+      "dur": 36000,
+      "amp": 0.5,
+      "pan": 0.3,
+      "envelope": { "kind": "exp", "attack": 120, "tau": 12000 },
+      "fx": [{ "kind": "bitcrush", "bits": 8 }]
+    },
+    {
+      "t": 60000,
+      "voice": "hiss",
+      "freq": 3200.0,
+      "dur": 12000,
+      "amp": 0.25,
+      "pan": 0.0,
+      "envelope": { "kind": "ad", "attack": 800, "decay": 11200 },
+      "fx": []
+    },
+    {
+      "t": 72000,
+      "voice": "sin",
+      "freq": 880.0,
+      "dur": 24000,
+      "amp": 0.35,
+      "pan": 0.5,
+      "envelope": { "kind": "ad", "attack": 240, "decay": 23760 },
+      "fx": [{ "kind": "reverse" }]
+    }
+  ],
+  "metadata": {
+    "title": "smoke",
+    "generator": "handmade"
+  }
+}

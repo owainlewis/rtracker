@@ -1,0 +1,3124 @@
+{
+  "sample_rate": 48000,
+  "duration_samples": 1440000,
+  "voices": {
+    "sub": {
+      "kind": "sine",
+      "default_pan": 0.0
+    },
+    "noise": {
+      "kind": "noise_bandpass",
+      "q": 2.5,
+      "default_pan": 0.0
+    },
+    "bell": {
+      "kind": "sine_partials",
+      "partials": [
+        1.0,
+        1.41,
+        2.13,
+        2.78,
+        3.61,
+        4.92
+      ],
+      "amplitudes": [
+        1.0,
+        0.7,
+        0.45,
+        0.3,
+        0.18,
+        0.1
+      ],
+      "default_pan": 0.0
+    },
+    "drone": {
+      "kind": "sine",
+      "default_pan": 0.0
+    },
+    "tick": {
+      "kind": "noise_bandpass",
+      "q": 20.0,
+      "default_pan": 0.0
+    },
+    "perc": {
+      "kind": "noise_bandpass",
+      "q": 4.0,
+      "default_pan": 0.0
+    },
+    "mid": {
+      "kind": "sine",
+      "default_pan": 0.0
+    }
+  },
+  "samples": {},
+  "events": [
+    {
+      "t": 0,
+      "voice": "drone",
+      "freq": 36.7,
+      "dur": 1440000,
+      "amp": 0.16,
+      "pan": -0.3,
+      "envelope": {
+        "kind": "ad",
+        "attack": 96000,
+        "decay": 1344000
+      },
+      "fx": [],
+      "pitch_ratio": null
+    },
+    {
+      "t": 0,
+      "voice": "drone",
+      "freq": 38.1,
+      "dur": 1440000,
+      "amp": 0.14,
+      "pan": 0.3,
+      "envelope": {
+        "kind": "ad",
+        "attack": 96000,
+        "decay": 1344000
+      },
+      "fx": [],
+      "pitch_ratio": null
+    },
+    {
+      "t": 96000,
+      "voice": "drone",
+      "freq": 311.13,
+      "dur": 384000,
+      "amp": 0.08,
+      "pan": 0.0,
+      "envelope": {
+        "kind": "exp",
+        "attack": 24000,
+        "tau": 60000
+      },
+      "fx": [
+        {
+          "kind": "bitcrush",
+          "bits": 6
+        }
+      ],
+      "pitch_ratio": null
+    },
+    {
+      "t": 48000,
+      "voice": "tick",
+      "freq": 1200.0,
+      "dur": 1500,
+      "amp": 0.18,
+      "pan": -0.6,
+      "envelope": {
+        "kind": "ad",
+        "attack": 30,
+        "decay": 1470
+      },
+      "fx": [
+        {
+          "kind": "comb_delay",
+          "delay_samples": 7200,
+          "feedback": 0.55
+        }
+      ],
+      "pitch_ratio": null
+    },
+    {
+      "t": 144000,
+      "voice": "tick",
+      "freq": 1500.0,
+      "dur": 1500,
+      "amp": 0.18,
+      "pan": 0.6,
+      "envelope": {
+        "kind": "ad",
+        "attack": 30,
+        "decay": 1470
+      },
+      "fx": [
+        {
+          "kind": "comb_delay",
+          "delay_samples": 7200,
+          "feedback": 0.55
+        }
+      ],
+      "pitch_ratio": null
+    },
+    {
+      "t": 240000,
+      "voice": "tick",
+      "freq": 1800.0,
+      "dur": 1500,
+      "amp": 0.18,
+      "pan": -0.6,
+      "envelope": {
+        "kind": "ad",
+        "attack": 30,
+        "decay": 1470
+      },
+      "fx": [
+        {
+          "kind": "comb_delay",
+          "delay_samples": 7200,
+          "feedback": 0.55
+        }
+      ],
+      "pitch_ratio": null
+    },
+    {
+      "t": 288000,
+      "voice": "sub",
+      "freq": 36.7,
+      "dur": 12000,
+      "amp": 0.85,
+      "pan": 0.0,
+      "envelope": {
+        "kind": "exp",
+        "attack": 30,
+        "tau": 4500
+      },
+      "fx": [],
+      "pitch_ratio": null
+    },
+    {
+      "t": 345600,
+      "voice": "sub",
+      "freq": 36.7,
+      "dur": 12000,
+      "amp": 0.85,
+      "pan": 0.0,
+      "envelope": {
+        "kind": "exp",
+        "attack": 30,
+        "tau": 4500
+      },
+      "fx": [],
+      "pitch_ratio": null
+    },
+    {
+      "t": 403200,
+      "voice": "sub",
+      "freq": 36.7,
+      "dur": 12000,
+      "amp": 0.85,
+      "pan": 0.0,
+      "envelope": {
+        "kind": "exp",
+        "attack": 30,
+        "tau": 4500
+      },
+      "fx": [],
+      "pitch_ratio": null
+    },
+    {
+      "t": 460800,
+      "voice": "sub",
+      "freq": 36.7,
+      "dur": 12000,
+      "amp": 0.85,
+      "pan": 0.0,
+      "envelope": {
+        "kind": "exp",
+        "attack": 30,
+        "tau": 4500
+      },
+      "fx": [],
+      "pitch_ratio": null
+    },
+    {
+      "t": 518400,
+      "voice": "sub",
+      "freq": 36.7,
+      "dur": 12000,
+      "amp": 0.85,
+      "pan": 0.0,
+      "envelope": {
+        "kind": "exp",
+        "attack": 30,
+        "tau": 4500
+      },
+      "fx": [],
+      "pitch_ratio": null
+    },
+    {
+      "t": 576000,
+      "voice": "sub",
+      "freq": 36.7,
+      "dur": 12000,
+      "amp": 0.85,
+      "pan": 0.0,
+      "envelope": {
+        "kind": "exp",
+        "attack": 30,
+        "tau": 4500
+      },
+      "fx": [],
+      "pitch_ratio": null
+    },
+    {
+      "t": 633600,
+      "voice": "sub",
+      "freq": 36.7,
+      "dur": 12000,
+      "amp": 0.85,
+      "pan": 0.0,
+      "envelope": {
+        "kind": "exp",
+        "attack": 30,
+        "tau": 4500
+      },
+      "fx": [],
+      "pitch_ratio": null
+    },
+    {
+      "t": 446400,
+      "voice": "perc",
+      "freq": 540.9226,
+      "dur": 2400,
+      "amp": 0.32,
+      "pan": 0.44891238,
+      "envelope": {
+        "kind": "ad",
+        "attack": 20,
+        "decay": 2380
+      },
+      "fx": [
+        {
+          "kind": "bitcrush",
+          "bits": 5
+        }
+      ],
+      "pitch_ratio": null
+    },
+    {
+      "t": 381600,
+      "voice": "perc",
+      "freq": 421.14603,
+      "dur": 2400,
+      "amp": 0.32,
+      "pan": -0.16244727,
+      "envelope": {
+        "kind": "ad",
+        "attack": 20,
+        "decay": 2380
+      },
+      "fx": [
+        {
+          "kind": "bitcrush",
+          "bits": 5
+        }
+      ],
+      "pitch_ratio": null
+    },
+    {
+      "t": 288000,
+      "voice": "perc",
+      "freq": 399.47076,
+      "dur": 2400,
+      "amp": 0.32,
+      "pan": -0.82182497,
+      "envelope": {
+        "kind": "ad",
+        "attack": 20,
+        "decay": 2380
+      },
+      "fx": [
+        {
+          "kind": "bitcrush",
+          "bits": 5
+        }
+      ],
+      "pitch_ratio": null
+    },
+    {
+      "t": 288000,
+      "voice": "perc",
+      "freq": 451.61118,
+      "dur": 2400,
+      "amp": 0.32,
+      "pan": -0.5905379,
+      "envelope": {
+        "kind": "ad",
+        "attack": 20,
+        "decay": 2380
+      },
+      "fx": [
+        {
+          "kind": "bitcrush",
+          "bits": 5
+        }
+      ],
+      "pitch_ratio": null
+    },
+    {
+      "t": 309600,
+      "voice": "perc",
+      "freq": 419.39346,
+      "dur": 2400,
+      "amp": 0.32,
+      "pan": 0.09619564,
+      "envelope": {
+        "kind": "ad",
+        "attack": 20,
+        "decay": 2380
+      },
+      "fx": [
+        {
+          "kind": "bitcrush",
+          "bits": 5
+        }
+      ],
+      "pitch_ratio": null
+    },
+    {
+      "t": 424800,
+      "voice": "perc",
+      "freq": 280.25735,
+      "dur": 2400,
+      "amp": 0.32,
+      "pan": -0.40643463,
+      "envelope": {
+        "kind": "ad",
+        "attack": 20,
+        "decay": 2380
+      },
+      "fx": [
+        {
+          "kind": "bitcrush",
+          "bits": 5
+        }
+      ],
+      "pitch_ratio": null
+    },
+    {
+      "t": 475200,
+      "voice": "perc",
+      "freq": 464.21375,
+      "dur": 2400,
+      "amp": 0.32,
+      "pan": -0.22638863,
+      "envelope": {
+        "kind": "ad",
+        "attack": 20,
+        "decay": 2380
+      },
+      "fx": [
+        {
+          "kind": "bitcrush",
+          "bits": 5
+        }
+      ],
+      "pitch_ratio": null
+    },
+    {
+      "t": 482400,
+      "voice": "perc",
+      "freq": 515.3351,
+      "dur": 2400,
+      "amp": 0.32,
+      "pan": -0.14148343,
+      "envelope": {
+        "kind": "ad",
+        "attack": 20,
+        "decay": 2380
+      },
+      "fx": [
+        {
+          "kind": "bitcrush",
+          "bits": 5
+        }
+      ],
+      "pitch_ratio": null
+    },
+    {
+      "t": 511200,
+      "voice": "perc",
+      "freq": 323.06335,
+      "dur": 2400,
+      "amp": 0.32,
+      "pan": 0.07735038,
+      "envelope": {
+        "kind": "ad",
+        "attack": 20,
+        "decay": 2380
+      },
+      "fx": [
+        {
+          "kind": "bitcrush",
+          "bits": 5
+        }
+      ],
+      "pitch_ratio": null
+    },
+    {
+      "t": 396000,
+      "voice": "perc",
+      "freq": 222.3019,
+      "dur": 2400,
+      "amp": 0.32,
+      "pan": 0.75915396,
+      "envelope": {
+        "kind": "ad",
+        "attack": 20,
+        "decay": 2380
+      },
+      "fx": [
+        {
+          "kind": "bitcrush",
+          "bits": 5
+        }
+      ],
+      "pitch_ratio": null
+    },
+    {
+      "t": 324000,
+      "voice": "perc",
+      "freq": 355.7218,
+      "dur": 2400,
+      "amp": 0.32,
+      "pan": 0.33328366,
+      "envelope": {
+        "kind": "ad",
+        "attack": 20,
+        "decay": 2380
+      },
+      "fx": [
+        {
+          "kind": "bitcrush",
+          "bits": 5
+        }
+      ],
+      "pitch_ratio": null
+    },
+    {
+      "t": 331200,
+      "voice": "perc",
+      "freq": 305.11108,
+      "dur": 2400,
+      "amp": 0.32,
+      "pan": -0.39253405,
+      "envelope": {
+        "kind": "ad",
+        "attack": 20,
+        "decay": 2380
+      },
+      "fx": [
+        {
+          "kind": "bitcrush",
+          "bits": 5
+        }
+      ],
+      "pitch_ratio": null
+    },
+    {
+      "t": 511200,
+      "voice": "perc",
+      "freq": 245.50638,
+      "dur": 2400,
+      "amp": 0.32,
+      "pan": 0.8359834,
+      "envelope": {
+        "kind": "ad",
+        "attack": 20,
+        "decay": 2380
+      },
+      "fx": [
+        {
+          "kind": "bitcrush",
+          "bits": 5
+        }
+      ],
+      "pitch_ratio": null
+    },
+    {
+      "t": 460800,
+      "voice": "perc",
+      "freq": 510.18604,
+      "dur": 2400,
+      "amp": 0.32,
+      "pan": -0.49837074,
+      "envelope": {
+        "kind": "ad",
+        "attack": 20,
+        "decay": 2380
+      },
+      "fx": [
+        {
+          "kind": "bitcrush",
+          "bits": 5
+        }
+      ],
+      "pitch_ratio": null
+    },
+    {
+      "t": 403200,
+      "voice": "mid",
+      "freq": 73.42,
+      "dur": 12000,
+      "amp": 0.3,
+      "pan": -0.4,
+      "envelope": {
+        "kind": "exp",
+        "attack": 60,
+        "tau": 6000
+      },
+      "fx": [
+        {
+          "kind": "bitcrush",
+          "bits": 3
+        },
+        {
+          "kind": "comb_delay",
+          "delay_samples": 3600,
+          "feedback": 0.5
+        }
+      ],
+      "pitch_ratio": null
+    },
+    {
+      "t": 403200,
+      "voice": "mid",
+      "freq": 77.78,
+      "dur": 12000,
+      "amp": 0.28,
+      "pan": 0.4,
+      "envelope": {
+        "kind": "exp",
+        "attack": 60,
+        "tau": 6000
+      },
+      "fx": [
+        {
+          "kind": "bitcrush",
+          "bits": 3
+        },
+        {
+          "kind": "comb_delay",
+          "delay_samples": 3600,
+          "feedback": 0.5
+        }
+      ],
+      "pitch_ratio": null
+    },
+    {
+      "t": 672000,
+      "voice": "bell",
+      "freq": 87.31,
+      "dur": 8000,
+      "amp": 0.32,
+      "pan": 0.2211721,
+      "envelope": {
+        "kind": "exp",
+        "attack": 40,
+        "tau": 4000
+      },
+      "fx": [
+        {
+          "kind": "bitcrush",
+          "bits": 5
+        },
+        {
+          "kind": "comb_delay",
+          "delay_samples": 1800,
+          "feedback": 0.65
+        }
+      ],
+      "pitch_ratio": null
+    },
+    {
+      "t": 682920,
+      "voice": "bell",
+      "freq": 110.0,
+      "dur": 8000,
+      "amp": 0.32,
+      "pan": -0.40853915,
+      "envelope": {
+        "kind": "exp",
+        "attack": 40,
+        "tau": 4000
+      },
+      "fx": [
+        {
+          "kind": "bitcrush",
+          "bits": 5
+        },
+        {
+          "kind": "comb_delay",
+          "delay_samples": 1800,
+          "feedback": 0.65
+        }
+      ],
+      "pitch_ratio": null
+    },
+    {
+      "t": 705106,
+      "voice": "bell",
+      "freq": 103.83,
+      "dur": 8000,
+      "amp": 0.32,
+      "pan": 0.16137654,
+      "envelope": {
+        "kind": "exp",
+        "attack": 40,
+        "tau": 4000
+      },
+      "fx": [
+        {
+          "kind": "bitcrush",
+          "bits": 5
+        },
+        {
+          "kind": "comb_delay",
+          "delay_samples": 1800,
+          "feedback": 0.65
+        }
+      ],
+      "pitch_ratio": null
+    },
+    {
+      "t": 735336,
+      "voice": "bell",
+      "freq": 110.0,
+      "dur": 8000,
+      "amp": 0.32,
+      "pan": -0.39512694,
+      "envelope": {
+        "kind": "exp",
+        "attack": 40,
+        "tau": 4000
+      },
+      "fx": [
+        {
+          "kind": "bitcrush",
+          "bits": 5
+        },
+        {
+          "kind": "comb_delay",
+          "delay_samples": 1800,
+          "feedback": 0.65
+        }
+      ],
+      "pitch_ratio": null
+    },
+    {
+      "t": 772358,
+      "voice": "bell",
+      "freq": 87.31,
+      "dur": 8000,
+      "amp": 0.32,
+      "pan": 0.233872,
+      "envelope": {
+        "kind": "exp",
+        "attack": 40,
+        "tau": 4000
+      },
+      "fx": [
+        {
+          "kind": "bitcrush",
+          "bits": 5
+        },
+        {
+          "kind": "comb_delay",
+          "delay_samples": 1800,
+          "feedback": 0.65
+        }
+      ],
+      "pitch_ratio": null
+    },
+    {
+      "t": 815420,
+      "voice": "bell",
+      "freq": 73.42,
+      "dur": 8000,
+      "amp": 0.32,
+      "pan": 0.61718863,
+      "envelope": {
+        "kind": "exp",
+        "attack": 40,
+        "tau": 4000
+      },
+      "fx": [
+        {
+          "kind": "bitcrush",
+          "bits": 5
+        },
+        {
+          "kind": "comb_delay",
+          "delay_samples": 1800,
+          "feedback": 0.65
+        }
+      ],
+      "pitch_ratio": null
+    },
+    {
+      "t": 864000,
+      "voice": "bell",
+      "freq": 155.56,
+      "dur": 8000,
+      "amp": 0.32,
+      "pan": -0.4487461,
+      "envelope": {
+        "kind": "exp",
+        "attack": 40,
+        "tau": 4000
+      },
+      "fx": [
+        {
+          "kind": "bitcrush",
+          "bits": 5
+        },
+        {
+          "kind": "comb_delay",
+          "delay_samples": 1800,
+          "feedback": 0.65
+        }
+      ],
+      "pitch_ratio": null
+    },
+    {
+      "t": 672000,
+      "voice": "noise",
+      "freq": 4000.0,
+      "dur": 1500,
+      "amp": 0.14,
+      "pan": 0.052758396,
+      "envelope": {
+        "kind": "ad",
+        "attack": 100,
+        "decay": 1400
+      },
+      "fx": [
+        {
+          "kind": "bitcrush",
+          "bits": 6
+        }
+      ],
+      "pitch_ratio": null
+    },
+    {
+      "t": 678000,
+      "voice": "noise",
+      "freq": 3877.4194,
+      "dur": 1500,
+      "amp": 0.14,
+      "pan": 0.07210034,
+      "envelope": {
+        "kind": "ad",
+        "attack": 100,
+        "decay": 1400
+      },
+      "fx": [
+        {
+          "kind": "bitcrush",
+          "bits": 6
+        }
+      ],
+      "pitch_ratio": null
+    },
+    {
+      "t": 684000,
+      "voice": "noise",
+      "freq": 3754.8389,
+      "dur": 1500,
+      "amp": 0.14,
+      "pan": 0.11400458,
+      "envelope": {
+        "kind": "ad",
+        "attack": 100,
+        "decay": 1400
+      },
+      "fx": [
+        {
+          "kind": "bitcrush",
+          "bits": 6
+        }
+      ],
+      "pitch_ratio": null
+    },
+    {
+      "t": 690000,
+      "voice": "noise",
+      "freq": 3632.2578,
+      "dur": 1500,
+      "amp": 0.14,
+      "pan": -0.04900652,
+      "envelope": {
+        "kind": "ad",
+        "attack": 100,
+        "decay": 1400
+      },
+      "fx": [
+        {
+          "kind": "bitcrush",
+          "bits": 6
+        }
+      ],
+      "pitch_ratio": null
+    },
+    {
+      "t": 696000,
+      "voice": "noise",
+      "freq": 3509.6775,
+      "dur": 1500,
+      "amp": 0.14,
+      "pan": -0.07959437,
+      "envelope": {
+        "kind": "ad",
+        "attack": 100,
+        "decay": 1400
+      },
+      "fx": [
+        {
+          "kind": "bitcrush",
+          "bits": 6
+        }
+      ],
+      "pitch_ratio": null
+    },
+    {
+      "t": 702000,
+      "voice": "noise",
+      "freq": 3387.097,
+      "dur": 1500,
+      "amp": 0.14,
+      "pan": 0.03546682,
+      "envelope": {
+        "kind": "ad",
+        "attack": 100,
+        "decay": 1400
+      },
+      "fx": [
+        {
+          "kind": "bitcrush",
+          "bits": 6
+        }
+      ],
+      "pitch_ratio": null
+    },
+    {
+      "t": 708000,
+      "voice": "noise",
+      "freq": 3264.516,
+      "dur": 1500,
+      "amp": 0.14,
+      "pan": -0.30874848,
+      "envelope": {
+        "kind": "ad",
+        "attack": 100,
+        "decay": 1400
+      },
+      "fx": [
+        {
+          "kind": "bitcrush",
+          "bits": 6
+        }
+      ],
+      "pitch_ratio": null
+    },
+    {
+      "t": 714000,
+      "voice": "noise",
+      "freq": 3141.9355,
+      "dur": 1500,
+      "amp": 0.14,
+      "pan": 0.179082,
+      "envelope": {
+        "kind": "ad",
+        "attack": 100,
+        "decay": 1400
+      },
+      "fx": [
+        {
+          "kind": "bitcrush",
+          "bits": 6
+        }
+      ],
+      "pitch_ratio": null
+    },
+    {
+      "t": 720000,
+      "voice": "noise",
+      "freq": 3019.3547,
+      "dur": 1500,
+      "amp": 0.14,
+      "pan": 0.22506067,
+      "envelope": {
+        "kind": "ad",
+        "attack": 100,
+        "decay": 1400
+      },
+      "fx": [
+        {
+          "kind": "bitcrush",
+          "bits": 6
+        }
+      ],
+      "pitch_ratio": null
+    },
+    {
+      "t": 726000,
+      "voice": "noise",
+      "freq": 2896.7742,
+      "dur": 1500,
+      "amp": 0.14,
+      "pan": -0.25955644,
+      "envelope": {
+        "kind": "ad",
+        "attack": 100,
+        "decay": 1400
+      },
+      "fx": [
+        {
+          "kind": "bitcrush",
+          "bits": 6
+        }
+      ],
+      "pitch_ratio": null
+    },
+    {
+      "t": 732000,
+      "voice": "noise",
+      "freq": 2774.1936,
+      "dur": 1500,
+      "amp": 0.14,
+      "pan": -0.32049435,
+      "envelope": {
+        "kind": "ad",
+        "attack": 100,
+        "decay": 1400
+      },
+      "fx": [
+        {
+          "kind": "bitcrush",
+          "bits": 6
+        }
+      ],
+      "pitch_ratio": null
+    },
+    {
+      "t": 738000,
+      "voice": "noise",
+      "freq": 2651.6128,
+      "dur": 1500,
+      "amp": 0.14,
+      "pan": -0.025776237,
+      "envelope": {
+        "kind": "ad",
+        "attack": 100,
+        "decay": 1400
+      },
+      "fx": [
+        {
+          "kind": "bitcrush",
+          "bits": 6
+        }
+      ],
+      "pitch_ratio": null
+    },
+    {
+      "t": 744000,
+      "voice": "noise",
+      "freq": 2529.0325,
+      "dur": 1500,
+      "amp": 0.14,
+      "pan": -0.08385676,
+      "envelope": {
+        "kind": "ad",
+        "attack": 100,
+        "decay": 1400
+      },
+      "fx": [
+        {
+          "kind": "bitcrush",
+          "bits": 6
+        }
+      ],
+      "pitch_ratio": null
+    },
+    {
+      "t": 750000,
+      "voice": "noise",
+      "freq": 2406.4517,
+      "dur": 1500,
+      "amp": 0.14,
+      "pan": 0.35677078,
+      "envelope": {
+        "kind": "ad",
+        "attack": 100,
+        "decay": 1400
+      },
+      "fx": [
+        {
+          "kind": "bitcrush",
+          "bits": 6
+        }
+      ],
+      "pitch_ratio": null
+    },
+    {
+      "t": 756000,
+      "voice": "noise",
+      "freq": 2283.8708,
+      "dur": 1500,
+      "amp": 0.14,
+      "pan": -0.39696217,
+      "envelope": {
+        "kind": "ad",
+        "attack": 100,
+        "decay": 1400
+      },
+      "fx": [
+        {
+          "kind": "bitcrush",
+          "bits": 6
+        }
+      ],
+      "pitch_ratio": null
+    },
+    {
+      "t": 762000,
+      "voice": "noise",
+      "freq": 2161.2903,
+      "dur": 1500,
+      "amp": 0.14,
+      "pan": -0.09148711,
+      "envelope": {
+        "kind": "ad",
+        "attack": 100,
+        "decay": 1400
+      },
+      "fx": [
+        {
+          "kind": "bitcrush",
+          "bits": 6
+        }
+      ],
+      "pitch_ratio": null
+    },
+    {
+      "t": 768000,
+      "voice": "noise",
+      "freq": 2038.7097,
+      "dur": 1500,
+      "amp": 0.14,
+      "pan": 0.26998714,
+      "envelope": {
+        "kind": "ad",
+        "attack": 100,
+        "decay": 1400
+      },
+      "fx": [
+        {
+          "kind": "bitcrush",
+          "bits": 6
+        }
+      ],
+      "pitch_ratio": null
+    },
+    {
+      "t": 774000,
+      "voice": "noise",
+      "freq": 1916.1289,
+      "dur": 1500,
+      "amp": 0.14,
+      "pan": 0.16919956,
+      "envelope": {
+        "kind": "ad",
+        "attack": 100,
+        "decay": 1400
+      },
+      "fx": [
+        {
+          "kind": "bitcrush",
+          "bits": 6
+        }
+      ],
+      "pitch_ratio": null
+    },
+    {
+      "t": 780000,
+      "voice": "noise",
+      "freq": 1793.5485,
+      "dur": 1500,
+      "amp": 0.14,
+      "pan": 0.1701676,
+      "envelope": {
+        "kind": "ad",
+        "attack": 100,
+        "decay": 1400
+      },
+      "fx": [
+        {
+          "kind": "bitcrush",
+          "bits": 6
+        }
+      ],
+      "pitch_ratio": null
+    },
+    {
+      "t": 786000,
+      "voice": "noise",
+      "freq": 1670.9678,
+      "dur": 1500,
+      "amp": 0.14,
+      "pan": -0.2001789,
+      "envelope": {
+        "kind": "ad",
+        "attack": 100,
+        "decay": 1400
+      },
+      "fx": [
+        {
+          "kind": "bitcrush",
+          "bits": 6
+        }
+      ],
+      "pitch_ratio": null
+    },
+    {
+      "t": 792000,
+      "voice": "noise",
+      "freq": 1548.3871,
+      "dur": 1500,
+      "amp": 0.14,
+      "pan": -0.19072953,
+      "envelope": {
+        "kind": "ad",
+        "attack": 100,
+        "decay": 1400
+      },
+      "fx": [
+        {
+          "kind": "bitcrush",
+          "bits": 6
+        }
+      ],
+      "pitch_ratio": null
+    },
+    {
+      "t": 798000,
+      "voice": "noise",
+      "freq": 1425.8064,
+      "dur": 1500,
+      "amp": 0.14,
+      "pan": 0.3106244,
+      "envelope": {
+        "kind": "ad",
+        "attack": 100,
+        "decay": 1400
+      },
+      "fx": [
+        {
+          "kind": "bitcrush",
+          "bits": 6
+        }
+      ],
+      "pitch_ratio": null
+    },
+    {
+      "t": 804000,
+      "voice": "noise",
+      "freq": 1303.2258,
+      "dur": 1500,
+      "amp": 0.14,
+      "pan": -0.24776645,
+      "envelope": {
+        "kind": "ad",
+        "attack": 100,
+        "decay": 1400
+      },
+      "fx": [
+        {
+          "kind": "bitcrush",
+          "bits": 6
+        }
+      ],
+      "pitch_ratio": null
+    },
+    {
+      "t": 810000,
+      "voice": "noise",
+      "freq": 1180.6451,
+      "dur": 1500,
+      "amp": 0.14,
+      "pan": -0.28596252,
+      "envelope": {
+        "kind": "ad",
+        "attack": 100,
+        "decay": 1400
+      },
+      "fx": [
+        {
+          "kind": "bitcrush",
+          "bits": 6
+        }
+      ],
+      "pitch_ratio": null
+    },
+    {
+      "t": 816000,
+      "voice": "noise",
+      "freq": 1058.0646,
+      "dur": 1500,
+      "amp": 0.14,
+      "pan": 0.017768383,
+      "envelope": {
+        "kind": "ad",
+        "attack": 100,
+        "decay": 1400
+      },
+      "fx": [
+        {
+          "kind": "bitcrush",
+          "bits": 6
+        }
+      ],
+      "pitch_ratio": null
+    },
+    {
+      "t": 822000,
+      "voice": "noise",
+      "freq": 935.4839,
+      "dur": 1500,
+      "amp": 0.14,
+      "pan": 0.16714767,
+      "envelope": {
+        "kind": "ad",
+        "attack": 100,
+        "decay": 1400
+      },
+      "fx": [
+        {
+          "kind": "bitcrush",
+          "bits": 6
+        }
+      ],
+      "pitch_ratio": null
+    },
+    {
+      "t": 828000,
+      "voice": "noise",
+      "freq": 812.9033,
+      "dur": 1500,
+      "amp": 0.14,
+      "pan": -0.37906605,
+      "envelope": {
+        "kind": "ad",
+        "attack": 100,
+        "decay": 1400
+      },
+      "fx": [
+        {
+          "kind": "bitcrush",
+          "bits": 6
+        }
+      ],
+      "pitch_ratio": null
+    },
+    {
+      "t": 834000,
+      "voice": "noise",
+      "freq": 690.3226,
+      "dur": 1500,
+      "amp": 0.14,
+      "pan": -0.20999013,
+      "envelope": {
+        "kind": "ad",
+        "attack": 100,
+        "decay": 1400
+      },
+      "fx": [
+        {
+          "kind": "bitcrush",
+          "bits": 6
+        }
+      ],
+      "pitch_ratio": null
+    },
+    {
+      "t": 840000,
+      "voice": "noise",
+      "freq": 567.74207,
+      "dur": 1500,
+      "amp": 0.14,
+      "pan": -0.112158716,
+      "envelope": {
+        "kind": "ad",
+        "attack": 100,
+        "decay": 1400
+      },
+      "fx": [
+        {
+          "kind": "bitcrush",
+          "bits": 6
+        }
+      ],
+      "pitch_ratio": null
+    },
+    {
+      "t": 846000,
+      "voice": "noise",
+      "freq": 445.1613,
+      "dur": 1500,
+      "amp": 0.14,
+      "pan": -0.13047439,
+      "envelope": {
+        "kind": "ad",
+        "attack": 100,
+        "decay": 1400
+      },
+      "fx": [
+        {
+          "kind": "bitcrush",
+          "bits": 6
+        }
+      ],
+      "pitch_ratio": null
+    },
+    {
+      "t": 852000,
+      "voice": "noise",
+      "freq": 322.58075,
+      "dur": 1500,
+      "amp": 0.14,
+      "pan": -0.08474192,
+      "envelope": {
+        "kind": "ad",
+        "attack": 100,
+        "decay": 1400
+      },
+      "fx": [
+        {
+          "kind": "bitcrush",
+          "bits": 6
+        }
+      ],
+      "pitch_ratio": null
+    },
+    {
+      "t": 858000,
+      "voice": "noise",
+      "freq": 200.0,
+      "dur": 1500,
+      "amp": 0.14,
+      "pan": -0.12374514,
+      "envelope": {
+        "kind": "ad",
+        "attack": 100,
+        "decay": 1400
+      },
+      "fx": [
+        {
+          "kind": "bitcrush",
+          "bits": 6
+        }
+      ],
+      "pitch_ratio": null
+    },
+    {
+      "t": 864000,
+      "voice": "sub",
+      "freq": 38.12943,
+      "dur": 9000,
+      "amp": 0.95,
+      "pan": 0.0,
+      "envelope": {
+        "kind": "exp",
+        "attack": 20,
+        "tau": 4000
+      },
+      "fx": [],
+      "pitch_ratio": null
+    },
+    {
+      "t": 885600,
+      "voice": "sub",
+      "freq": 38.71532,
+      "dur": 9000,
+      "amp": 0.95,
+      "pan": 0.0,
+      "envelope": {
+        "kind": "exp",
+        "attack": 20,
+        "tau": 4000
+      },
+      "fx": [],
+      "pitch_ratio": null
+    },
+    {
+      "t": 907200,
+      "voice": "sub",
+      "freq": 38.319054,
+      "dur": 9000,
+      "amp": 0.95,
+      "pan": 0.0,
+      "envelope": {
+        "kind": "exp",
+        "attack": 20,
+        "tau": 4000
+      },
+      "fx": [],
+      "pitch_ratio": null
+    },
+    {
+      "t": 936000,
+      "voice": "sub",
+      "freq": 37.398968,
+      "dur": 9000,
+      "amp": 0.95,
+      "pan": 0.0,
+      "envelope": {
+        "kind": "exp",
+        "attack": 20,
+        "tau": 4000
+      },
+      "fx": [],
+      "pitch_ratio": null
+    },
+    {
+      "t": 950400,
+      "voice": "sub",
+      "freq": 37.818325,
+      "dur": 9000,
+      "amp": 0.95,
+      "pan": 0.0,
+      "envelope": {
+        "kind": "exp",
+        "attack": 20,
+        "tau": 4000
+      },
+      "fx": [],
+      "pitch_ratio": null
+    },
+    {
+      "t": 972000,
+      "voice": "sub",
+      "freq": 37.904823,
+      "dur": 9000,
+      "amp": 0.95,
+      "pan": 0.0,
+      "envelope": {
+        "kind": "exp",
+        "attack": 20,
+        "tau": 4000
+      },
+      "fx": [],
+      "pitch_ratio": null
+    },
+    {
+      "t": 892800,
+      "voice": "noise",
+      "freq": 1172.7455,
+      "dur": 5000,
+      "amp": 0.55,
+      "pan": 0.12141727,
+      "envelope": {
+        "kind": "ad",
+        "attack": 30,
+        "decay": 4970
+      },
+      "fx": [
+        {
+          "kind": "bitcrush",
+          "bits": 4
+        },
+        {
+          "kind": "comb_delay",
+          "delay_samples": 1200,
+          "feedback": 0.4
+        }
+      ],
+      "pitch_ratio": null
+    },
+    {
+      "t": 950400,
+      "voice": "noise",
+      "freq": 947.901,
+      "dur": 5000,
+      "amp": 0.55,
+      "pan": -0.12070973,
+      "envelope": {
+        "kind": "ad",
+        "attack": 30,
+        "decay": 4970
+      },
+      "fx": [
+        {
+          "kind": "bitcrush",
+          "bits": 4
+        },
+        {
+          "kind": "comb_delay",
+          "delay_samples": 1200,
+          "feedback": 0.4
+        }
+      ],
+      "pitch_ratio": null
+    },
+    {
+      "t": 864000,
+      "voice": "tick",
+      "freq": 3539.0767,
+      "dur": 1200,
+      "amp": 0.2,
+      "pan": -0.75,
+      "envelope": {
+        "kind": "ad",
+        "attack": 6,
+        "decay": 1194
+      },
+      "fx": [
+        {
+          "kind": "stutter",
+          "slice_samples": 200,
+          "repeats": 6
+        }
+      ],
+      "pitch_ratio": null
+    },
+    {
+      "t": 878400,
+      "voice": "tick",
+      "freq": 5063.548,
+      "dur": 1200,
+      "amp": 0.2,
+      "pan": -0.75,
+      "envelope": {
+        "kind": "ad",
+        "attack": 6,
+        "decay": 1194
+      },
+      "fx": [
+        {
+          "kind": "stutter",
+          "slice_samples": 200,
+          "repeats": 6
+        }
+      ],
+      "pitch_ratio": null
+    },
+    {
+      "t": 885600,
+      "voice": "tick",
+      "freq": 5551.013,
+      "dur": 1200,
+      "amp": 0.2,
+      "pan": 0.75,
+      "envelope": {
+        "kind": "ad",
+        "attack": 6,
+        "decay": 1194
+      },
+      "fx": [
+        {
+          "kind": "stutter",
+          "slice_samples": 200,
+          "repeats": 6
+        }
+      ],
+      "pitch_ratio": null
+    },
+    {
+      "t": 892800,
+      "voice": "tick",
+      "freq": 5511.1963,
+      "dur": 1200,
+      "amp": 0.2,
+      "pan": -0.75,
+      "envelope": {
+        "kind": "ad",
+        "attack": 6,
+        "decay": 1194
+      },
+      "fx": [
+        {
+          "kind": "stutter",
+          "slice_samples": 200,
+          "repeats": 6
+        }
+      ],
+      "pitch_ratio": null
+    },
+    {
+      "t": 907200,
+      "voice": "tick",
+      "freq": 3628.0747,
+      "dur": 1200,
+      "amp": 0.2,
+      "pan": -0.75,
+      "envelope": {
+        "kind": "ad",
+        "attack": 6,
+        "decay": 1194
+      },
+      "fx": [
+        {
+          "kind": "stutter",
+          "slice_samples": 200,
+          "repeats": 6
+        }
+      ],
+      "pitch_ratio": null
+    },
+    {
+      "t": 921600,
+      "voice": "tick",
+      "freq": 5452.4688,
+      "dur": 1200,
+      "amp": 0.2,
+      "pan": -0.75,
+      "envelope": {
+        "kind": "ad",
+        "attack": 6,
+        "decay": 1194
+      },
+      "fx": [
+        {
+          "kind": "stutter",
+          "slice_samples": 200,
+          "repeats": 6
+        }
+      ],
+      "pitch_ratio": null
+    },
+    {
+      "t": 928800,
+      "voice": "tick",
+      "freq": 4407.144,
+      "dur": 1200,
+      "amp": 0.2,
+      "pan": 0.75,
+      "envelope": {
+        "kind": "ad",
+        "attack": 6,
+        "decay": 1194
+      },
+      "fx": [
+        {
+          "kind": "stutter",
+          "slice_samples": 200,
+          "repeats": 6
+        }
+      ],
+      "pitch_ratio": null
+    },
+    {
+      "t": 943200,
+      "voice": "tick",
+      "freq": 4251.5854,
+      "dur": 1200,
+      "amp": 0.2,
+      "pan": 0.75,
+      "envelope": {
+        "kind": "ad",
+        "attack": 6,
+        "decay": 1194
+      },
+      "fx": [
+        {
+          "kind": "stutter",
+          "slice_samples": 200,
+          "repeats": 6
+        }
+      ],
+      "pitch_ratio": null
+    },
+    {
+      "t": 950400,
+      "voice": "tick",
+      "freq": 5914.295,
+      "dur": 1200,
+      "amp": 0.2,
+      "pan": -0.75,
+      "envelope": {
+        "kind": "ad",
+        "attack": 6,
+        "decay": 1194
+      },
+      "fx": [
+        {
+          "kind": "stutter",
+          "slice_samples": 200,
+          "repeats": 6
+        }
+      ],
+      "pitch_ratio": null
+    },
+    {
+      "t": 957600,
+      "voice": "tick",
+      "freq": 3961.1025,
+      "dur": 1200,
+      "amp": 0.2,
+      "pan": 0.75,
+      "envelope": {
+        "kind": "ad",
+        "attack": 6,
+        "decay": 1194
+      },
+      "fx": [
+        {
+          "kind": "stutter",
+          "slice_samples": 200,
+          "repeats": 6
+        }
+      ],
+      "pitch_ratio": null
+    },
+    {
+      "t": 972000,
+      "voice": "tick",
+      "freq": 4747.99,
+      "dur": 1200,
+      "amp": 0.2,
+      "pan": 0.75,
+      "envelope": {
+        "kind": "ad",
+        "attack": 6,
+        "decay": 1194
+      },
+      "fx": [
+        {
+          "kind": "stutter",
+          "slice_samples": 200,
+          "repeats": 6
+        }
+      ],
+      "pitch_ratio": null
+    },
+    {
+      "t": 979200,
+      "voice": "sub",
+      "freq": 37.909267,
+      "dur": 9000,
+      "amp": 0.95,
+      "pan": 0.0,
+      "envelope": {
+        "kind": "exp",
+        "attack": 20,
+        "tau": 4000
+      },
+      "fx": [],
+      "pitch_ratio": null
+    },
+    {
+      "t": 1000800,
+      "voice": "sub",
+      "freq": 38.896984,
+      "dur": 9000,
+      "amp": 0.95,
+      "pan": 0.0,
+      "envelope": {
+        "kind": "exp",
+        "attack": 20,
+        "tau": 4000
+      },
+      "fx": [],
+      "pitch_ratio": null
+    },
+    {
+      "t": 1022400,
+      "voice": "sub",
+      "freq": 38.252262,
+      "dur": 9000,
+      "amp": 0.95,
+      "pan": 0.0,
+      "envelope": {
+        "kind": "exp",
+        "attack": 20,
+        "tau": 4000
+      },
+      "fx": [],
+      "pitch_ratio": null
+    },
+    {
+      "t": 1051200,
+      "voice": "sub",
+      "freq": 37.730984,
+      "dur": 9000,
+      "amp": 0.95,
+      "pan": 0.0,
+      "envelope": {
+        "kind": "exp",
+        "attack": 20,
+        "tau": 4000
+      },
+      "fx": [],
+      "pitch_ratio": null
+    },
+    {
+      "t": 1065600,
+      "voice": "sub",
+      "freq": 38.416054,
+      "dur": 9000,
+      "amp": 0.95,
+      "pan": 0.0,
+      "envelope": {
+        "kind": "exp",
+        "attack": 20,
+        "tau": 4000
+      },
+      "fx": [],
+      "pitch_ratio": null
+    },
+    {
+      "t": 1087200,
+      "voice": "sub",
+      "freq": 38.088165,
+      "dur": 9000,
+      "amp": 0.95,
+      "pan": 0.0,
+      "envelope": {
+        "kind": "exp",
+        "attack": 20,
+        "tau": 4000
+      },
+      "fx": [],
+      "pitch_ratio": null
+    },
+    {
+      "t": 1008000,
+      "voice": "noise",
+      "freq": 1199.4723,
+      "dur": 5000,
+      "amp": 0.55,
+      "pan": 0.060476318,
+      "envelope": {
+        "kind": "ad",
+        "attack": 30,
+        "decay": 4970
+      },
+      "fx": [
+        {
+          "kind": "bitcrush",
+          "bits": 4
+        },
+        {
+          "kind": "comb_delay",
+          "delay_samples": 1200,
+          "feedback": 0.4
+        }
+      ],
+      "pitch_ratio": null
+    },
+    {
+      "t": 1065600,
+      "voice": "noise",
+      "freq": 1357.8811,
+      "dur": 5000,
+      "amp": 0.55,
+      "pan": 0.1259178,
+      "envelope": {
+        "kind": "ad",
+        "attack": 30,
+        "decay": 4970
+      },
+      "fx": [
+        {
+          "kind": "bitcrush",
+          "bits": 4
+        },
+        {
+          "kind": "comb_delay",
+          "delay_samples": 1200,
+          "feedback": 0.4
+        }
+      ],
+      "pitch_ratio": null
+    },
+    {
+      "t": 979200,
+      "voice": "tick",
+      "freq": 6328.743,
+      "dur": 1200,
+      "amp": 0.2,
+      "pan": -0.75,
+      "envelope": {
+        "kind": "ad",
+        "attack": 6,
+        "decay": 1194
+      },
+      "fx": [
+        {
+          "kind": "stutter",
+          "slice_samples": 200,
+          "repeats": 6
+        }
+      ],
+      "pitch_ratio": null
+    },
+    {
+      "t": 993600,
+      "voice": "tick",
+      "freq": 5004.4067,
+      "dur": 1200,
+      "amp": 0.2,
+      "pan": -0.75,
+      "envelope": {
+        "kind": "ad",
+        "attack": 6,
+        "decay": 1194
+      },
+      "fx": [
+        {
+          "kind": "stutter",
+          "slice_samples": 200,
+          "repeats": 6
+        }
+      ],
+      "pitch_ratio": null
+    },
+    {
+      "t": 1000800,
+      "voice": "tick",
+      "freq": 4537.2817,
+      "dur": 1200,
+      "amp": 0.2,
+      "pan": 0.75,
+      "envelope": {
+        "kind": "ad",
+        "attack": 6,
+        "decay": 1194
+      },
+      "fx": [
+        {
+          "kind": "stutter",
+          "slice_samples": 200,
+          "repeats": 6
+        }
+      ],
+      "pitch_ratio": null
+    },
+    {
+      "t": 1008000,
+      "voice": "tick",
+      "freq": 3651.7266,
+      "dur": 1200,
+      "amp": 0.2,
+      "pan": -0.75,
+      "envelope": {
+        "kind": "ad",
+        "attack": 6,
+        "decay": 1194
+      },
+      "fx": [
+        {
+          "kind": "stutter",
+          "slice_samples": 200,
+          "repeats": 6
+        }
+      ],
+      "pitch_ratio": null
+    },
+    {
+      "t": 1022400,
+      "voice": "tick",
+      "freq": 3549.1765,
+      "dur": 1200,
+      "amp": 0.2,
+      "pan": -0.75,
+      "envelope": {
+        "kind": "ad",
+        "attack": 6,
+        "decay": 1194
+      },
+      "fx": [
+        {
+          "kind": "stutter",
+          "slice_samples": 200,
+          "repeats": 6
+        }
+      ],
+      "pitch_ratio": null
+    },
+    {
+      "t": 1036800,
+      "voice": "tick",
+      "freq": 3565.9397,
+      "dur": 1200,
+      "amp": 0.2,
+      "pan": -0.75,
+      "envelope": {
+        "kind": "ad",
+        "attack": 6,
+        "decay": 1194
+      },
+      "fx": [
+        {
+          "kind": "stutter",
+          "slice_samples": 200,
+          "repeats": 6
+        }
+      ],
+      "pitch_ratio": null
+    },
+    {
+      "t": 1044000,
+      "voice": "tick",
+      "freq": 5913.0884,
+      "dur": 1200,
+      "amp": 0.2,
+      "pan": 0.75,
+      "envelope": {
+        "kind": "ad",
+        "attack": 6,
+        "decay": 1194
+      },
+      "fx": [
+        {
+          "kind": "stutter",
+          "slice_samples": 200,
+          "repeats": 6
+        }
+      ],
+      "pitch_ratio": null
+    },
+    {
+      "t": 1058400,
+      "voice": "tick",
+      "freq": 6006.01,
+      "dur": 1200,
+      "amp": 0.2,
+      "pan": 0.75,
+      "envelope": {
+        "kind": "ad",
+        "attack": 6,
+        "decay": 1194
+      },
+      "fx": [
+        {
+          "kind": "stutter",
+          "slice_samples": 200,
+          "repeats": 6
+        }
+      ],
+      "pitch_ratio": null
+    },
+    {
+      "t": 1065600,
+      "voice": "tick",
+      "freq": 5549.0737,
+      "dur": 1200,
+      "amp": 0.2,
+      "pan": -0.75,
+      "envelope": {
+        "kind": "ad",
+        "attack": 6,
+        "decay": 1194
+      },
+      "fx": [
+        {
+          "kind": "stutter",
+          "slice_samples": 200,
+          "repeats": 6
+        }
+      ],
+      "pitch_ratio": null
+    },
+    {
+      "t": 1072800,
+      "voice": "tick",
+      "freq": 4064.3782,
+      "dur": 1200,
+      "amp": 0.2,
+      "pan": 0.75,
+      "envelope": {
+        "kind": "ad",
+        "attack": 6,
+        "decay": 1194
+      },
+      "fx": [
+        {
+          "kind": "stutter",
+          "slice_samples": 200,
+          "repeats": 6
+        }
+      ],
+      "pitch_ratio": null
+    },
+    {
+      "t": 1087200,
+      "voice": "tick",
+      "freq": 5999.635,
+      "dur": 1200,
+      "amp": 0.2,
+      "pan": 0.75,
+      "envelope": {
+        "kind": "ad",
+        "attack": 6,
+        "decay": 1194
+      },
+      "fx": [
+        {
+          "kind": "stutter",
+          "slice_samples": 200,
+          "repeats": 6
+        }
+      ],
+      "pitch_ratio": null
+    },
+    {
+      "t": 1094400,
+      "voice": "sub",
+      "freq": 38.05792,
+      "dur": 9000,
+      "amp": 0.95,
+      "pan": 0.0,
+      "envelope": {
+        "kind": "exp",
+        "attack": 20,
+        "tau": 4000
+      },
+      "fx": [],
+      "pitch_ratio": null
+    },
+    {
+      "t": 1116000,
+      "voice": "sub",
+      "freq": 38.177105,
+      "dur": 9000,
+      "amp": 0.95,
+      "pan": 0.0,
+      "envelope": {
+        "kind": "exp",
+        "attack": 20,
+        "tau": 4000
+      },
+      "fx": [],
+      "pitch_ratio": null
+    },
+    {
+      "t": 1137600,
+      "voice": "sub",
+      "freq": 37.561222,
+      "dur": 9000,
+      "amp": 0.95,
+      "pan": 0.0,
+      "envelope": {
+        "kind": "exp",
+        "attack": 20,
+        "tau": 4000
+      },
+      "fx": [],
+      "pitch_ratio": null
+    },
+    {
+      "t": 1166400,
+      "voice": "sub",
+      "freq": 37.440323,
+      "dur": 9000,
+      "amp": 0.95,
+      "pan": 0.0,
+      "envelope": {
+        "kind": "exp",
+        "attack": 20,
+        "tau": 4000
+      },
+      "fx": [],
+      "pitch_ratio": null
+    },
+    {
+      "t": 1180800,
+      "voice": "sub",
+      "freq": 38.330383,
+      "dur": 9000,
+      "amp": 0.95,
+      "pan": 0.0,
+      "envelope": {
+        "kind": "exp",
+        "attack": 20,
+        "tau": 4000
+      },
+      "fx": [],
+      "pitch_ratio": null
+    },
+    {
+      "t": 1202400,
+      "voice": "sub",
+      "freq": 37.93539,
+      "dur": 9000,
+      "amp": 0.95,
+      "pan": 0.0,
+      "envelope": {
+        "kind": "exp",
+        "attack": 20,
+        "tau": 4000
+      },
+      "fx": [],
+      "pitch_ratio": null
+    },
+    {
+      "t": 1123200,
+      "voice": "noise",
+      "freq": 803.297,
+      "dur": 5000,
+      "amp": 0.55,
+      "pan": -0.0452729,
+      "envelope": {
+        "kind": "ad",
+        "attack": 30,
+        "decay": 4970
+      },
+      "fx": [
+        {
+          "kind": "bitcrush",
+          "bits": 4
+        },
+        {
+          "kind": "comb_delay",
+          "delay_samples": 1200,
+          "feedback": 0.4
+        }
+      ],
+      "pitch_ratio": null
+    },
+    {
+      "t": 1180800,
+      "voice": "noise",
+      "freq": 944.7361,
+      "dur": 5000,
+      "amp": 0.55,
+      "pan": -0.00059744716,
+      "envelope": {
+        "kind": "ad",
+        "attack": 30,
+        "decay": 4970
+      },
+      "fx": [
+        {
+          "kind": "bitcrush",
+          "bits": 4
+        },
+        {
+          "kind": "comb_delay",
+          "delay_samples": 1200,
+          "feedback": 0.4
+        }
+      ],
+      "pitch_ratio": null
+    },
+    {
+      "t": 1094400,
+      "voice": "tick",
+      "freq": 6191.635,
+      "dur": 1200,
+      "amp": 0.2,
+      "pan": -0.75,
+      "envelope": {
+        "kind": "ad",
+        "attack": 6,
+        "decay": 1194
+      },
+      "fx": [
+        {
+          "kind": "stutter",
+          "slice_samples": 200,
+          "repeats": 6
+        }
+      ],
+      "pitch_ratio": null
+    },
+    {
+      "t": 1108800,
+      "voice": "tick",
+      "freq": 3720.1484,
+      "dur": 1200,
+      "amp": 0.2,
+      "pan": -0.75,
+      "envelope": {
+        "kind": "ad",
+        "attack": 6,
+        "decay": 1194
+      },
+      "fx": [
+        {
+          "kind": "stutter",
+          "slice_samples": 200,
+          "repeats": 6
+        }
+      ],
+      "pitch_ratio": null
+    },
+    {
+      "t": 1116000,
+      "voice": "tick",
+      "freq": 5030.01,
+      "dur": 1200,
+      "amp": 0.2,
+      "pan": 0.75,
+      "envelope": {
+        "kind": "ad",
+        "attack": 6,
+        "decay": 1194
+      },
+      "fx": [
+        {
+          "kind": "stutter",
+          "slice_samples": 200,
+          "repeats": 6
+        }
+      ],
+      "pitch_ratio": null
+    },
+    {
+      "t": 1123200,
+      "voice": "tick",
+      "freq": 4202.843,
+      "dur": 1200,
+      "amp": 0.2,
+      "pan": -0.75,
+      "envelope": {
+        "kind": "ad",
+        "attack": 6,
+        "decay": 1194
+      },
+      "fx": [
+        {
+          "kind": "stutter",
+          "slice_samples": 200,
+          "repeats": 6
+        }
+      ],
+      "pitch_ratio": null
+    },
+    {
+      "t": 1137600,
+      "voice": "tick",
+      "freq": 6355.8823,
+      "dur": 1200,
+      "amp": 0.2,
+      "pan": -0.75,
+      "envelope": {
+        "kind": "ad",
+        "attack": 6,
+        "decay": 1194
+      },
+      "fx": [
+        {
+          "kind": "stutter",
+          "slice_samples": 200,
+          "repeats": 6
+        }
+      ],
+      "pitch_ratio": null
+    },
+    {
+      "t": 1152000,
+      "voice": "tick",
+      "freq": 3567.245,
+      "dur": 1200,
+      "amp": 0.2,
+      "pan": -0.75,
+      "envelope": {
+        "kind": "ad",
+        "attack": 6,
+        "decay": 1194
+      },
+      "fx": [
+        {
+          "kind": "stutter",
+          "slice_samples": 200,
+          "repeats": 6
+        }
+      ],
+      "pitch_ratio": null
+    },
+    {
+      "t": 1159200,
+      "voice": "tick",
+      "freq": 4266.9473,
+      "dur": 1200,
+      "amp": 0.2,
+      "pan": 0.75,
+      "envelope": {
+        "kind": "ad",
+        "attack": 6,
+        "decay": 1194
+      },
+      "fx": [
+        {
+          "kind": "stutter",
+          "slice_samples": 200,
+          "repeats": 6
+        }
+      ],
+      "pitch_ratio": null
+    },
+    {
+      "t": 1173600,
+      "voice": "tick",
+      "freq": 5764.5435,
+      "dur": 1200,
+      "amp": 0.2,
+      "pan": 0.75,
+      "envelope": {
+        "kind": "ad",
+        "attack": 6,
+        "decay": 1194
+      },
+      "fx": [
+        {
+          "kind": "stutter",
+          "slice_samples": 200,
+          "repeats": 6
+        }
+      ],
+      "pitch_ratio": null
+    },
+    {
+      "t": 1180800,
+      "voice": "tick",
+      "freq": 3729.4485,
+      "dur": 1200,
+      "amp": 0.2,
+      "pan": -0.75,
+      "envelope": {
+        "kind": "ad",
+        "attack": 6,
+        "decay": 1194
+      },
+      "fx": [
+        {
+          "kind": "stutter",
+          "slice_samples": 200,
+          "repeats": 6
+        }
+      ],
+      "pitch_ratio": null
+    },
+    {
+      "t": 1188000,
+      "voice": "tick",
+      "freq": 4132.871,
+      "dur": 1200,
+      "amp": 0.2,
+      "pan": 0.75,
+      "envelope": {
+        "kind": "ad",
+        "attack": 6,
+        "decay": 1194
+      },
+      "fx": [
+        {
+          "kind": "stutter",
+          "slice_samples": 200,
+          "repeats": 6
+        }
+      ],
+      "pitch_ratio": null
+    },
+    {
+      "t": 1202400,
+      "voice": "tick",
+      "freq": 6344.415,
+      "dur": 1200,
+      "amp": 0.2,
+      "pan": 0.75,
+      "envelope": {
+        "kind": "ad",
+        "attack": 6,
+        "decay": 1194
+      },
+      "fx": [
+        {
+          "kind": "stutter",
+          "slice_samples": 200,
+          "repeats": 6
+        }
+      ],
+      "pitch_ratio": null
+    },
+    {
+      "t": 878400,
+      "voice": "sub",
+      "freq": 49.0,
+      "dur": 6000,
+      "amp": 0.45,
+      "pan": -0.00041097403,
+      "envelope": {
+        "kind": "exp",
+        "attack": 20,
+        "tau": 3000
+      },
+      "fx": [
+        {
+          "kind": "bitcrush",
+          "bits": 5
+        }
+      ],
+      "pitch_ratio": null
+    },
+    {
+      "t": 900000,
+      "voice": "sub",
+      "freq": 49.0,
+      "dur": 6000,
+      "amp": 0.45,
+      "pan": -0.003128022,
+      "envelope": {
+        "kind": "exp",
+        "attack": 20,
+        "tau": 3000
+      },
+      "fx": [
+        {
+          "kind": "bitcrush",
+          "bits": 5
+        }
+      ],
+      "pitch_ratio": null
+    },
+    {
+      "t": 921600,
+      "voice": "sub",
+      "freq": 49.0,
+      "dur": 6000,
+      "amp": 0.45,
+      "pan": 0.26724946,
+      "envelope": {
+        "kind": "exp",
+        "attack": 20,
+        "tau": 3000
+      },
+      "fx": [
+        {
+          "kind": "bitcrush",
+          "bits": 5
+        }
+      ],
+      "pitch_ratio": null
+    },
+    {
+      "t": 943200,
+      "voice": "sub",
+      "freq": 49.0,
+      "dur": 6000,
+      "amp": 0.45,
+      "pan": -0.16179454,
+      "envelope": {
+        "kind": "exp",
+        "attack": 20,
+        "tau": 3000
+      },
+      "fx": [
+        {
+          "kind": "bitcrush",
+          "bits": 5
+        }
+      ],
+      "pitch_ratio": null
+    },
+    {
+      "t": 964800,
+      "voice": "sub",
+      "freq": 49.0,
+      "dur": 6000,
+      "amp": 0.45,
+      "pan": 0.21007043,
+      "envelope": {
+        "kind": "exp",
+        "attack": 20,
+        "tau": 3000
+      },
+      "fx": [
+        {
+          "kind": "bitcrush",
+          "bits": 5
+        }
+      ],
+      "pitch_ratio": null
+    },
+    {
+      "t": 986400,
+      "voice": "sub",
+      "freq": 49.0,
+      "dur": 6000,
+      "amp": 0.45,
+      "pan": -0.29310155,
+      "envelope": {
+        "kind": "exp",
+        "attack": 20,
+        "tau": 3000
+      },
+      "fx": [
+        {
+          "kind": "bitcrush",
+          "bits": 5
+        }
+      ],
+      "pitch_ratio": null
+    },
+    {
+      "t": 1008000,
+      "voice": "sub",
+      "freq": 49.0,
+      "dur": 6000,
+      "amp": 0.45,
+      "pan": -0.2195094,
+      "envelope": {
+        "kind": "exp",
+        "attack": 20,
+        "tau": 3000
+      },
+      "fx": [
+        {
+          "kind": "bitcrush",
+          "bits": 5
+        }
+      ],
+      "pitch_ratio": null
+    },
+    {
+      "t": 1029600,
+      "voice": "sub",
+      "freq": 49.0,
+      "dur": 6000,
+      "amp": 0.45,
+      "pan": 0.13064077,
+      "envelope": {
+        "kind": "exp",
+        "attack": 20,
+        "tau": 3000
+      },
+      "fx": [
+        {
+          "kind": "bitcrush",
+          "bits": 5
+        }
+      ],
+      "pitch_ratio": null
+    },
+    {
+      "t": 1051200,
+      "voice": "sub",
+      "freq": 49.0,
+      "dur": 6000,
+      "amp": 0.45,
+      "pan": -0.1692426,
+      "envelope": {
+        "kind": "exp",
+        "attack": 20,
+        "tau": 3000
+      },
+      "fx": [
+        {
+          "kind": "bitcrush",
+          "bits": 5
+        }
+      ],
+      "pitch_ratio": null
+    },
+    {
+      "t": 1072800,
+      "voice": "sub",
+      "freq": 49.0,
+      "dur": 6000,
+      "amp": 0.45,
+      "pan": 0.099592954,
+      "envelope": {
+        "kind": "exp",
+        "attack": 20,
+        "tau": 3000
+      },
+      "fx": [
+        {
+          "kind": "bitcrush",
+          "bits": 5
+        }
+      ],
+      "pitch_ratio": null
+    },
+    {
+      "t": 1094400,
+      "voice": "sub",
+      "freq": 49.0,
+      "dur": 6000,
+      "amp": 0.45,
+      "pan": -0.15291582,
+      "envelope": {
+        "kind": "exp",
+        "attack": 20,
+        "tau": 3000
+      },
+      "fx": [
+        {
+          "kind": "bitcrush",
+          "bits": 5
+        }
+      ],
+      "pitch_ratio": null
+    },
+    {
+      "t": 1116000,
+      "voice": "sub",
+      "freq": 49.0,
+      "dur": 6000,
+      "amp": 0.45,
+      "pan": 0.06259456,
+      "envelope": {
+        "kind": "exp",
+        "attack": 20,
+        "tau": 3000
+      },
+      "fx": [
+        {
+          "kind": "bitcrush",
+          "bits": 5
+        }
+      ],
+      "pitch_ratio": null
+    },
+    {
+      "t": 1137600,
+      "voice": "sub",
+      "freq": 49.0,
+      "dur": 6000,
+      "amp": 0.45,
+      "pan": -0.06393592,
+      "envelope": {
+        "kind": "exp",
+        "attack": 20,
+        "tau": 3000
+      },
+      "fx": [
+        {
+          "kind": "bitcrush",
+          "bits": 5
+        }
+      ],
+      "pitch_ratio": null
+    },
+    {
+      "t": 914400,
+      "voice": "mid",
+      "freq": 103.83,
+      "dur": 9000,
+      "amp": 0.4,
+      "pan": -0.40480506,
+      "envelope": {
+        "kind": "ad",
+        "attack": 4,
+        "decay": 8996
+      },
+      "fx": [
+        {
+          "kind": "stutter",
+          "slice_samples": 600,
+          "repeats": 12
+        },
+        {
+          "kind": "bitcrush",
+          "bits": 3
+        },
+        {
+          "kind": "comb_delay",
+          "delay_samples": 3000,
+          "feedback": 0.6
+        }
+      ],
+      "pitch_ratio": null
+    },
+    {
+      "t": 1029600,
+      "voice": "mid",
+      "freq": 73.42,
+      "dur": 9000,
+      "amp": 0.4,
+      "pan": 0.21028394,
+      "envelope": {
+        "kind": "ad",
+        "attack": 4,
+        "decay": 8996
+      },
+      "fx": [
+        {
+          "kind": "stutter",
+          "slice_samples": 600,
+          "repeats": 12
+        },
+        {
+          "kind": "bitcrush",
+          "bits": 3
+        },
+        {
+          "kind": "comb_delay",
+          "delay_samples": 3000,
+          "feedback": 0.6
+        }
+      ],
+      "pitch_ratio": null
+    },
+    {
+      "t": 1144800,
+      "voice": "mid",
+      "freq": 103.83,
+      "dur": 9000,
+      "amp": 0.4,
+      "pan": 0.2957855,
+      "envelope": {
+        "kind": "ad",
+        "attack": 4,
+        "decay": 8996
+      },
+      "fx": [
+        {
+          "kind": "stutter",
+          "slice_samples": 600,
+          "repeats": 12
+        },
+        {
+          "kind": "bitcrush",
+          "bits": 3
+        },
+        {
+          "kind": "comb_delay",
+          "delay_samples": 3000,
+          "feedback": 0.6
+        }
+      ],
+      "pitch_ratio": null
+    },
+    {
+      "t": 1152000,
+      "voice": "bell",
+      "freq": 155.56,
+      "dur": 14000,
+      "amp": 0.42,
+      "pan": -0.477005,
+      "envelope": {
+        "kind": "exp",
+        "attack": 200,
+        "tau": 7000
+      },
+      "fx": [
+        {
+          "kind": "reverse"
+        },
+        {
+          "kind": "bitcrush",
+          "bits": 4
+        },
+        {
+          "kind": "comb_delay",
+          "delay_samples": 6000,
+          "feedback": 0.6
+        }
+      ],
+      "pitch_ratio": null
+    },
+    {
+      "t": 1184000,
+      "voice": "bell",
+      "freq": 130.81,
+      "dur": 14000,
+      "amp": 0.42,
+      "pan": 0.19887131,
+      "envelope": {
+        "kind": "exp",
+        "attack": 200,
+        "tau": 7000
+      },
+      "fx": [
+        {
+          "kind": "reverse"
+        },
+        {
+          "kind": "bitcrush",
+          "bits": 4
+        },
+        {
+          "kind": "comb_delay",
+          "delay_samples": 6000,
+          "feedback": 0.6
+        }
+      ],
+      "pitch_ratio": null
+    },
+    {
+      "t": 1216000,
+      "voice": "bell",
+      "freq": 110.0,
+      "dur": 14000,
+      "amp": 0.42,
+      "pan": -0.08179557,
+      "envelope": {
+        "kind": "exp",
+        "attack": 200,
+        "tau": 7000
+      },
+      "fx": [
+        {
+          "kind": "reverse"
+        },
+        {
+          "kind": "bitcrush",
+          "bits": 4
+        },
+        {
+          "kind": "comb_delay",
+          "delay_samples": 6000,
+          "feedback": 0.6
+        }
+      ],
+      "pitch_ratio": null
+    },
+    {
+      "t": 1248000,
+      "voice": "bell",
+      "freq": 103.83,
+      "dur": 14000,
+      "amp": 0.42,
+      "pan": 0.2625826,
+      "envelope": {
+        "kind": "exp",
+        "attack": 200,
+        "tau": 7000
+      },
+      "fx": [
+        {
+          "kind": "reverse"
+        },
+        {
+          "kind": "bitcrush",
+          "bits": 4
+        },
+        {
+          "kind": "comb_delay",
+          "delay_samples": 6000,
+          "feedback": 0.6
+        }
+      ],
+      "pitch_ratio": null
+    },
+    {
+      "t": 1280000,
+      "voice": "bell",
+      "freq": 87.31,
+      "dur": 14000,
+      "amp": 0.42,
+      "pan": 0.18994474,
+      "envelope": {
+        "kind": "exp",
+        "attack": 200,
+        "tau": 7000
+      },
+      "fx": [
+        {
+          "kind": "reverse"
+        },
+        {
+          "kind": "bitcrush",
+          "bits": 4
+        },
+        {
+          "kind": "comb_delay",
+          "delay_samples": 6000,
+          "feedback": 0.6
+        }
+      ],
+      "pitch_ratio": null
+    },
+    {
+      "t": 1312000,
+      "voice": "bell",
+      "freq": 77.78,
+      "dur": 14000,
+      "amp": 0.42,
+      "pan": -0.6739344,
+      "envelope": {
+        "kind": "exp",
+        "attack": 200,
+        "tau": 7000
+      },
+      "fx": [
+        {
+          "kind": "reverse"
+        },
+        {
+          "kind": "bitcrush",
+          "bits": 4
+        },
+        {
+          "kind": "comb_delay",
+          "delay_samples": 6000,
+          "feedback": 0.6
+        }
+      ],
+      "pitch_ratio": null
+    },
+    {
+      "t": 1344000,
+      "voice": "bell",
+      "freq": 73.42,
+      "dur": 14000,
+      "amp": 0.42,
+      "pan": -0.29023042,
+      "envelope": {
+        "kind": "exp",
+        "attack": 200,
+        "tau": 7000
+      },
+      "fx": [
+        {
+          "kind": "reverse"
+        },
+        {
+          "kind": "bitcrush",
+          "bits": 4
+        },
+        {
+          "kind": "comb_delay",
+          "delay_samples": 6000,
+          "feedback": 0.6
+        }
+      ],
+      "pitch_ratio": null
+    },
+    {
+      "t": 1332000,
+      "voice": "sub",
+      "freq": 32.0,
+      "dur": 16000,
+      "amp": 0.95,
+      "pan": 0.0,
+      "envelope": {
+        "kind": "exp",
+        "attack": 40,
+        "tau": 8000
+      },
+      "fx": [],
+      "pitch_ratio": null
+    },
+    {
+      "t": 1344000,
+      "voice": "noise",
+      "freq": 600.0,
+      "dur": 96000,
+      "amp": 0.12,
+      "pan": 0.0,
+      "envelope": {
+        "kind": "ad",
+        "attack": 8000,
+        "decay": 88000
+      },
+      "fx": [
+        {
+          "kind": "sample_rate_reduce",
+          "factor": 12
+        },
+        {
+          "kind": "comb_delay",
+          "delay_samples": 3600,
+          "feedback": 0.55
+        }
+      ],
+      "pitch_ratio": null
+    }
+  ],
+  "metadata": {
+    "title": "idm_dark",
+    "seed": 16045693110842147038,
+    "generator": "handmade/programmatic",
+    "constraints_ref": null
+  }
+}
