@@ -1,0 +1,1 @@
+@apps/rtracker-cli/examples/noto_alphabet.rs
