@@ -6,7 +6,7 @@ use std::path::{Path, PathBuf};
 use std::time::{Duration, SystemTime};
 
 use anyhow::{Context, Result};
-use rtracker_core::Pattern;
+use rtracker_core::{Pattern, Song, SongMetadata};
 
 use crate::engine::AudioEngine;
 
@@ -53,12 +53,64 @@ pub fn render_pattern_at(path: &Path, target_sr: u32) -> Result<(Vec<f32>, usize
     Ok((rendered, n))
 }
 
-pub fn read_pattern(path: &Path) -> Result<Pattern> {
-    let text = std::fs::read_to_string(path).context("read pattern")?;
-    let pat: Pattern = serde_json::from_str(&text).context("parse pattern")?;
-    Ok(pat)
+/// Load a file as a `Song`, transparently wrapping a bare single-pattern file.
+/// Returns `(song, was_song_format)` so the editor knows which format to save
+/// back. Detection is unambiguous: a `Song` requires a `patterns` array, a
+/// `Pattern` requires `tempo_bpm`/`rows`/etc — neither parses as the other.
+pub fn read_song(path: &Path) -> Result<(Song, bool)> {
+    let text = std::fs::read_to_string(path).context("read song")?;
+    if let Ok(song) = serde_json::from_str::<Song>(&text) {
+        if !song.patterns.is_empty() {
+            return Ok((song, true));
+        }
+    }
+    let pat: Pattern = serde_json::from_str(&text)
+        .context("file is neither a song (patterns array) nor a pattern")?;
+    Ok((Song { patterns: vec![pat], metadata: SongMetadata::default() }, false))
 }
 
 pub fn file_mtime(p: &Path) -> Option<SystemTime> {
     std::fs::metadata(p).and_then(|m| m.modified()).ok()
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    fn tmp(name: &str, body: &str) -> PathBuf {
+        let nanos = std::time::SystemTime::now()
+            .duration_since(std::time::UNIX_EPOCH)
+            .unwrap()
+            .as_nanos();
+        let p = std::env::temp_dir().join(format!("rtracker_pb_{}_{}_{}", std::process::id(), nanos, name));
+        std::fs::write(&p, body).unwrap();
+        p
+    }
+
+    const PATTERN_JSON: &str = r#"{
+        "sample_rate": 48000, "tempo_bpm": 160, "lines_per_beat": 4, "rows": 16,
+        "voices": {"k": {"kind": "sine", "default_pan": 0.0}},
+        "tracks": [{"name":"k","voice":"k","default_amp":0.8,"default_pan":0.0,
+            "default_envelope":{"kind":"gate"},"default_duration_rows":1.0,
+            "cells":[{"row":0,"note":50.0}]}]
+    }"#;
+
+    #[test]
+    fn read_song_wraps_bare_pattern() {
+        let p = tmp("pat.json", PATTERN_JSON);
+        let (song, was_song) = read_song(&p).expect("read");
+        assert!(!was_song, "bare pattern must not report song format");
+        assert_eq!(song.patterns.len(), 1);
+        let _ = std::fs::remove_file(p);
+    }
+
+    #[test]
+    fn read_song_reads_song_format() {
+        let body = format!(r#"{{"patterns": [{}, {}]}}"#, PATTERN_JSON, PATTERN_JSON);
+        let p = tmp("song.json", &body);
+        let (song, was_song) = read_song(&p).expect("read");
+        assert!(was_song, "patterns array must report song format");
+        assert_eq!(song.patterns.len(), 2);
+        let _ = std::fs::remove_file(p);
+    }
 }

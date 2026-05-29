@@ -1,1 +1,1297 @@
-@examples/vordhosbn.json
+{
+  "sample_rate": 48000,
+  "tempo_bpm": 140.0,
+  "lines_per_beat": 4,
+  "rows": 64,
+  "voices": {},
+  "samples": {},
+  "tracks": [
+    {
+      "name": "lead",
+      "instrument": "aphex_pluck",
+      "voice": null,
+      "default_amp": null,
+      "default_pan": null,
+      "default_envelope": null,
+      "default_fx": null,
+      "default_duration_rows": null,
+      "default_pitch_env": null,
+      "cells": [
+        {
+          "row": 0,
+          "note": "B-3",
+          "velocity": null,
+          "duration_rows": 2.0,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 2,
+          "note": "D-4",
+          "velocity": null,
+          "duration_rows": 2.0,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 4,
+          "note": "F#4",
+          "velocity": null,
+          "duration_rows": 2.0,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 6,
+          "note": "A-4",
+          "velocity": null,
+          "duration_rows": 2.0,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 8,
+          "note": "B-4",
+          "velocity": null,
+          "duration_rows": 2.0,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 10,
+          "note": "A-4",
+          "velocity": null,
+          "duration_rows": 2.0,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 11,
+          "note": "F#4",
+          "velocity": null,
+          "duration_rows": 2.0,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 14,
+          "note": "D-4",
+          "velocity": null,
+          "duration_rows": 2.0,
+          "fx": [
+            {
+              "kind": "bitcrush",
+              "bits": 6
+            }
+          ],
+          "pitch_env": null
+        },
+        {
+          "row": 16,
+          "note": "G-4",
+          "velocity": null,
+          "duration_rows": 2.0,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 18,
+          "note": "F#4",
+          "velocity": null,
+          "duration_rows": 2.0,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 20,
+          "note": "E-4",
+          "velocity": null,
+          "duration_rows": 2.0,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 22,
+          "note": "D-4",
+          "velocity": null,
+          "duration_rows": 2.0,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 24,
+          "note": "B-3",
+          "velocity": null,
+          "duration_rows": 2.0,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 25,
+          "note": "A-3",
+          "velocity": null,
+          "duration_rows": 2.0,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 27,
+          "note": "B-3",
+          "velocity": null,
+          "duration_rows": 2.0,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 30,
+          "note": "D-4",
+          "velocity": null,
+          "duration_rows": 2.0,
+          "fx": [
+            {
+              "kind": "bitcrush",
+              "bits": 6
+            }
+          ],
+          "pitch_env": null
+        },
+        {
+          "row": 32,
+          "note": "B-3",
+          "velocity": null,
+          "duration_rows": 2.0,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 34,
+          "note": "D-4",
+          "velocity": null,
+          "duration_rows": 2.0,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 36,
+          "note": "F#4",
+          "velocity": null,
+          "duration_rows": 2.0,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 38,
+          "note": "B-4",
+          "velocity": null,
+          "duration_rows": 2.0,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 40,
+          "note": "C#5",
+          "velocity": null,
+          "duration_rows": 2.0,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 41,
+          "note": "B-4",
+          "velocity": null,
+          "duration_rows": 2.0,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 43,
+          "note": "A-4",
+          "velocity": null,
+          "duration_rows": 2.0,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 46,
+          "note": "F#4",
+          "velocity": null,
+          "duration_rows": 2.0,
+          "fx": [
+            {
+              "kind": "bitcrush",
+              "bits": 6
+            }
+          ],
+          "pitch_env": null
+        },
+        {
+          "row": 48,
+          "note": "F#4",
+          "velocity": null,
+          "duration_rows": 2.0,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 50,
+          "note": "E-4",
+          "velocity": null,
+          "duration_rows": 2.0,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 52,
+          "note": "D-4",
+          "velocity": null,
+          "duration_rows": 2.0,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 54,
+          "note": "D-4",
+          "velocity": null,
+          "duration_rows": 2.0,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 56,
+          "note": "B-3",
+          "velocity": null,
+          "duration_rows": 2.0,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 58,
+          "note": "A-3",
+          "velocity": null,
+          "duration_rows": 2.0,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 60,
+          "note": "F#3",
+          "velocity": null,
+          "duration_rows": 2.0,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 63,
+          "note": "B-3",
+          "velocity": null,
+          "duration_rows": 2.0,
+          "fx": [],
+          "pitch_env": null
+        }
+      ]
+    },
+    {
+      "name": "bass",
+      "instrument": "bass_pulse",
+      "voice": null,
+      "default_amp": 0.4,
+      "default_pan": null,
+      "default_envelope": null,
+      "default_fx": null,
+      "default_duration_rows": null,
+      "default_pitch_env": null,
+      "cells": [
+        {
+          "row": 0,
+          "note": "B-2",
+          "velocity": null,
+          "duration_rows": 2.5,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 7,
+          "note": "B-2",
+          "velocity": null,
+          "duration_rows": 2.5,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 16,
+          "note": "G-2",
+          "velocity": null,
+          "duration_rows": 2.5,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 23,
+          "note": "G-2",
+          "velocity": null,
+          "duration_rows": 2.5,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 32,
+          "note": "B-2",
+          "velocity": null,
+          "duration_rows": 2.5,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 39,
+          "note": "B-2",
+          "velocity": null,
+          "duration_rows": 2.5,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 48,
+          "note": "D-3",
+          "velocity": null,
+          "duration_rows": 2.5,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 55,
+          "note": "F#2",
+          "velocity": null,
+          "duration_rows": 2.5,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 60,
+          "note": "B-2",
+          "velocity": null,
+          "duration_rows": 2.5,
+          "fx": [],
+          "pitch_env": null
+        }
+      ]
+    },
+    {
+      "name": "kick",
+      "instrument": "sub_kick",
+      "voice": null,
+      "default_amp": 0.9,
+      "default_pan": null,
+      "default_envelope": null,
+      "default_fx": null,
+      "default_duration_rows": null,
+      "default_pitch_env": null,
+      "cells": [
+        {
+          "row": 0,
+          "note": "C-2",
+          "velocity": null,
+          "duration_rows": 1.0,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 3,
+          "note": "C-2",
+          "velocity": null,
+          "duration_rows": 1.0,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 6,
+          "note": "C-2",
+          "velocity": null,
+          "duration_rows": 1.0,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 10,
+          "note": "C-2",
+          "velocity": null,
+          "duration_rows": 1.0,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 12,
+          "note": "C-2",
+          "velocity": null,
+          "duration_rows": 1.0,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 16,
+          "note": "C-2",
+          "velocity": null,
+          "duration_rows": 1.0,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 21,
+          "note": "C-2",
+          "velocity": null,
+          "duration_rows": 1.0,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 22,
+          "note": "C-2",
+          "velocity": null,
+          "duration_rows": 1.0,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 25,
+          "note": "C-2",
+          "velocity": null,
+          "duration_rows": 1.0,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 28,
+          "note": "C-2",
+          "velocity": null,
+          "duration_rows": 1.0,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 30,
+          "note": "C-2",
+          "velocity": null,
+          "duration_rows": 1.0,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 32,
+          "note": "C-2",
+          "velocity": null,
+          "duration_rows": 1.0,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 35,
+          "note": "C-2",
+          "velocity": null,
+          "duration_rows": 1.0,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 38,
+          "note": "C-2",
+          "velocity": null,
+          "duration_rows": 1.0,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 40,
+          "note": "C-2",
+          "velocity": null,
+          "duration_rows": 1.0,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 43,
+          "note": "C-2",
+          "velocity": null,
+          "duration_rows": 1.0,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 46,
+          "note": "C-2",
+          "velocity": null,
+          "duration_rows": 1.0,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 48,
+          "note": "C-2",
+          "velocity": null,
+          "duration_rows": 1.0,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 50,
+          "note": "C-2",
+          "velocity": null,
+          "duration_rows": 1.0,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 54,
+          "note": "C-2",
+          "velocity": null,
+          "duration_rows": 1.0,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 58,
+          "note": "C-2",
+          "velocity": null,
+          "duration_rows": 1.0,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 59,
+          "note": "C-2",
+          "velocity": null,
+          "duration_rows": 1.0,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 61,
+          "note": "C-2",
+          "velocity": null,
+          "duration_rows": 1.0,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 63,
+          "note": "C-2",
+          "velocity": null,
+          "duration_rows": 1.0,
+          "fx": [],
+          "pitch_env": null
+        }
+      ]
+    },
+    {
+      "name": "snare",
+      "instrument": "noise_snare",
+      "voice": null,
+      "default_amp": 0.55,
+      "default_pan": null,
+      "default_envelope": null,
+      "default_fx": null,
+      "default_duration_rows": null,
+      "default_pitch_env": null,
+      "cells": [
+        {
+          "row": 4,
+          "note": "C-4",
+          "velocity": null,
+          "duration_rows": 1.0,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 12,
+          "note": "C-4",
+          "velocity": null,
+          "duration_rows": 1.0,
+          "fx": [
+            {
+              "kind": "bitcrush",
+              "bits": 4
+            }
+          ],
+          "pitch_env": null
+        },
+        {
+          "row": 20,
+          "note": "C-4",
+          "velocity": null,
+          "duration_rows": 1.0,
+          "fx": [
+            {
+              "kind": "stutter",
+              "slice_samples": 600,
+              "repeats": 6
+            },
+            {
+              "kind": "bitcrush",
+              "bits": 5
+            }
+          ],
+          "pitch_env": null
+        },
+        {
+          "row": 28,
+          "note": "C-4",
+          "velocity": null,
+          "duration_rows": 1.0,
+          "fx": [
+            {
+              "kind": "reverse"
+            },
+            {
+              "kind": "bitcrush",
+              "bits": 5
+            }
+          ],
+          "pitch_env": null
+        },
+        {
+          "row": 36,
+          "note": "C-4",
+          "velocity": null,
+          "duration_rows": 1.0,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 44,
+          "note": "C-4",
+          "velocity": null,
+          "duration_rows": 1.0,
+          "fx": [
+            {
+              "kind": "bitcrush",
+              "bits": 4
+            }
+          ],
+          "pitch_env": null
+        },
+        {
+          "row": 52,
+          "note": "C-4",
+          "velocity": null,
+          "duration_rows": 1.0,
+          "fx": [
+            {
+              "kind": "stutter",
+              "slice_samples": 600,
+              "repeats": 6
+            },
+            {
+              "kind": "bitcrush",
+              "bits": 5
+            }
+          ],
+          "pitch_env": null
+        },
+        {
+          "row": 60,
+          "note": "C-4",
+          "velocity": null,
+          "duration_rows": 1.0,
+          "fx": [
+            {
+              "kind": "reverse"
+            },
+            {
+              "kind": "bitcrush",
+              "bits": 5
+            }
+          ],
+          "pitch_env": null
+        }
+      ]
+    },
+    {
+      "name": "hat",
+      "instrument": "closed_hat",
+      "voice": null,
+      "default_amp": 0.22,
+      "default_pan": null,
+      "default_envelope": null,
+      "default_fx": null,
+      "default_duration_rows": null,
+      "default_pitch_env": null,
+      "cells": [
+        {
+          "row": 0,
+          "note": "C-7",
+          "velocity": null,
+          "duration_rows": 0.4,
+          "fx": [
+            {
+              "kind": "stutter",
+              "slice_samples": 200,
+              "repeats": 5
+            }
+          ],
+          "pitch_env": null
+        },
+        {
+          "row": 1,
+          "note": "C-7",
+          "velocity": null,
+          "duration_rows": 0.4,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 2,
+          "note": "C-7",
+          "velocity": null,
+          "duration_rows": 0.4,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 3,
+          "note": "C-7",
+          "velocity": null,
+          "duration_rows": 0.4,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 4,
+          "note": "C-7",
+          "velocity": null,
+          "duration_rows": 0.4,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 6,
+          "note": "C-7",
+          "velocity": null,
+          "duration_rows": 0.4,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 7,
+          "note": "C-7",
+          "velocity": null,
+          "duration_rows": 0.4,
+          "fx": [
+            {
+              "kind": "stutter",
+              "slice_samples": 200,
+              "repeats": 5
+            }
+          ],
+          "pitch_env": null
+        },
+        {
+          "row": 8,
+          "note": "C-7",
+          "velocity": null,
+          "duration_rows": 0.4,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 9,
+          "note": "C-7",
+          "velocity": null,
+          "duration_rows": 0.4,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 10,
+          "note": "C-7",
+          "velocity": null,
+          "duration_rows": 0.4,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 12,
+          "note": "C-7",
+          "velocity": null,
+          "duration_rows": 0.4,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 13,
+          "note": "C-7",
+          "velocity": null,
+          "duration_rows": 0.4,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 14,
+          "note": "C-7",
+          "velocity": null,
+          "duration_rows": 0.4,
+          "fx": [
+            {
+              "kind": "stutter",
+              "slice_samples": 200,
+              "repeats": 5
+            }
+          ],
+          "pitch_env": null
+        },
+        {
+          "row": 15,
+          "note": "C-7",
+          "velocity": null,
+          "duration_rows": 0.4,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 16,
+          "note": "C-7",
+          "velocity": null,
+          "duration_rows": 0.4,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 17,
+          "note": "C-7",
+          "velocity": null,
+          "duration_rows": 0.4,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 18,
+          "note": "C-7",
+          "velocity": null,
+          "duration_rows": 0.4,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 19,
+          "note": "C-7",
+          "velocity": null,
+          "duration_rows": 0.4,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 20,
+          "note": "C-7",
+          "velocity": null,
+          "duration_rows": 0.4,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 22,
+          "note": "C-7",
+          "velocity": null,
+          "duration_rows": 0.4,
+          "fx": [
+            {
+              "kind": "stutter",
+              "slice_samples": 200,
+              "repeats": 5
+            }
+          ],
+          "pitch_env": null
+        },
+        {
+          "row": 23,
+          "note": "C-7",
+          "velocity": null,
+          "duration_rows": 0.4,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 24,
+          "note": "C-7",
+          "velocity": null,
+          "duration_rows": 0.4,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 26,
+          "note": "C-7",
+          "velocity": null,
+          "duration_rows": 0.4,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 28,
+          "note": "C-7",
+          "velocity": null,
+          "duration_rows": 0.4,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 29,
+          "note": "C-7",
+          "velocity": null,
+          "duration_rows": 0.4,
+          "fx": [
+            {
+              "kind": "stutter",
+              "slice_samples": 200,
+              "repeats": 5
+            }
+          ],
+          "pitch_env": null
+        },
+        {
+          "row": 30,
+          "note": "C-7",
+          "velocity": null,
+          "duration_rows": 0.4,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 31,
+          "note": "C-7",
+          "velocity": null,
+          "duration_rows": 0.4,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 32,
+          "note": "C-7",
+          "velocity": null,
+          "duration_rows": 0.4,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 33,
+          "note": "C-7",
+          "velocity": null,
+          "duration_rows": 0.4,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 34,
+          "note": "C-7",
+          "velocity": null,
+          "duration_rows": 0.4,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 35,
+          "note": "C-7",
+          "velocity": null,
+          "duration_rows": 0.4,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 36,
+          "note": "C-7",
+          "velocity": null,
+          "duration_rows": 0.4,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 38,
+          "note": "C-7",
+          "velocity": null,
+          "duration_rows": 0.4,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 39,
+          "note": "C-7",
+          "velocity": null,
+          "duration_rows": 0.4,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 40,
+          "note": "C-7",
+          "velocity": null,
+          "duration_rows": 0.4,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 41,
+          "note": "C-7",
+          "velocity": null,
+          "duration_rows": 0.4,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 42,
+          "note": "C-7",
+          "velocity": null,
+          "duration_rows": 0.4,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 44,
+          "note": "C-7",
+          "velocity": null,
+          "duration_rows": 0.4,
+          "fx": [
+            {
+              "kind": "stutter",
+              "slice_samples": 200,
+              "repeats": 5
+            }
+          ],
+          "pitch_env": null
+        },
+        {
+          "row": 45,
+          "note": "C-7",
+          "velocity": null,
+          "duration_rows": 0.4,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 46,
+          "note": "C-7",
+          "velocity": null,
+          "duration_rows": 0.4,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 47,
+          "note": "C-7",
+          "velocity": null,
+          "duration_rows": 0.4,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 48,
+          "note": "C-7",
+          "velocity": null,
+          "duration_rows": 0.4,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 49,
+          "note": "C-7",
+          "velocity": null,
+          "duration_rows": 0.4,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 50,
+          "note": "C-7",
+          "velocity": null,
+          "duration_rows": 0.4,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 51,
+          "note": "C-7",
+          "velocity": null,
+          "duration_rows": 0.4,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 52,
+          "note": "C-7",
+          "velocity": null,
+          "duration_rows": 0.4,
+          "fx": [
+            {
+              "kind": "stutter",
+              "slice_samples": 200,
+              "repeats": 5
+            }
+          ],
+          "pitch_env": null
+        },
+        {
+          "row": 54,
+          "note": "C-7",
+          "velocity": null,
+          "duration_rows": 0.4,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 55,
+          "note": "C-7",
+          "velocity": null,
+          "duration_rows": 0.4,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 56,
+          "note": "C-7",
+          "velocity": null,
+          "duration_rows": 0.4,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 57,
+          "note": "C-7",
+          "velocity": null,
+          "duration_rows": 0.4,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 58,
+          "note": "C-7",
+          "velocity": null,
+          "duration_rows": 0.4,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 60,
+          "note": "C-7",
+          "velocity": null,
+          "duration_rows": 0.4,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 62,
+          "note": "C-7",
+          "velocity": null,
+          "duration_rows": 0.4,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 63,
+          "note": "C-7",
+          "velocity": null,
+          "duration_rows": 0.4,
+          "fx": [],
+          "pitch_env": null
+        }
+      ]
+    },
+    {
+      "name": "zap",
+      "instrument": "glitch_zap",
+      "voice": null,
+      "default_amp": 0.32,
+      "default_pan": null,
+      "default_envelope": null,
+      "default_fx": null,
+      "default_duration_rows": null,
+      "default_pitch_env": null,
+      "cells": [
+        {
+          "row": 9,
+          "note": "A-4",
+          "velocity": null,
+          "duration_rows": 1.0,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 21,
+          "note": "A-4",
+          "velocity": null,
+          "duration_rows": 1.0,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 35,
+          "note": "A-4",
+          "velocity": null,
+          "duration_rows": 1.0,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 47,
+          "note": "A-4",
+          "velocity": null,
+          "duration_rows": 1.0,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 59,
+          "note": "A-4",
+          "velocity": null,
+          "duration_rows": 1.0,
+          "fx": [],
+          "pitch_env": null
+        }
+      ]
+    },
+    {
+      "name": "drone",
+      "instrument": "dark_drone",
+      "voice": null,
+      "default_amp": 0.14,
+      "default_pan": null,
+      "default_envelope": null,
+      "default_fx": null,
+      "default_duration_rows": null,
+      "default_pitch_env": null,
+      "cells": [
+        {
+          "row": 0,
+          "note": "B-1",
+          "velocity": null,
+          "duration_rows": 64.0,
+          "fx": [],
+          "pitch_env": null
+        }
+      ]
+    },
+    {
+      "name": "tail",
+      "instrument": "metallic_bell",
+      "voice": null,
+      "default_amp": 0.35,
+      "default_pan": null,
+      "default_envelope": null,
+      "default_fx": null,
+      "default_duration_rows": null,
+      "default_pitch_env": null,
+      "cells": [
+        {
+          "row": 62,
+          "note": "F#5",
+          "velocity": null,
+          "duration_rows": 4.0,
+          "fx": [
+            {
+              "kind": "reverse"
+            }
+          ],
+          "pitch_env": null
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "title": "vordhosbn",
+    "author": "handmade/programmatic"
+  }
+}

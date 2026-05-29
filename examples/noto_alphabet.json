@@ -1,1 +1,3113 @@
-@examples/noto_alphabet.json
+{
+  "sample_rate": 48000,
+  "tempo_bpm": 120.0,
+  "lines_per_beat": 4,
+  "rows": 320,
+  "voices": {
+    "sine": {
+      "kind": "sine",
+      "default_pan": 0.0
+    },
+    "click": {
+      "kind": "noise_bandpass",
+      "q": 60.0,
+      "default_pan": 0.0
+    }
+  },
+  "samples": {},
+  "tracks": [
+    {
+      "name": "drone_l",
+      "instrument": null,
+      "voice": "sine",
+      "default_amp": 0.13,
+      "default_pan": -0.2,
+      "default_envelope": {
+        "kind": "ad",
+        "attack": 96000,
+        "decay": 1824000
+      },
+      "default_fx": [],
+      "default_duration_rows": 320.0,
+      "default_pitch_env": null,
+      "cells": [
+        {
+          "row": 0,
+          "note": 42.0,
+          "velocity": null,
+          "duration_rows": 320.0,
+          "pan": null,
+          "fx": [],
+          "pitch_env": null
+        }
+      ]
+    },
+    {
+      "name": "drone_r",
+      "instrument": null,
+      "voice": "sine",
+      "default_amp": 0.11,
+      "default_pan": 0.2,
+      "default_envelope": {
+        "kind": "ad",
+        "attack": 96000,
+        "decay": 1824000
+      },
+      "default_fx": [],
+      "default_duration_rows": 320.0,
+      "default_pitch_env": null,
+      "cells": [
+        {
+          "row": 0,
+          "note": 43.4,
+          "velocity": null,
+          "duration_rows": 320.0,
+          "pan": null,
+          "fx": [],
+          "pitch_env": null
+        }
+      ]
+    },
+    {
+      "name": "click",
+      "instrument": null,
+      "voice": "sine",
+      "default_amp": 0.3,
+      "default_pan": 0.0,
+      "default_envelope": {
+        "kind": "ad",
+        "attack": 8,
+        "decay": 272
+      },
+      "default_fx": [],
+      "default_duration_rows": 0.046666667,
+      "default_pitch_env": null,
+      "cells": [
+        {
+          "row": 4,
+          "note": 9800.0,
+          "velocity": 0.42,
+          "duration_rows": 0.046666667,
+          "pan": -0.95,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 16,
+          "note": 12200.0,
+          "velocity": 0.38,
+          "duration_rows": 0.046666667,
+          "pan": 0.95,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 22,
+          "note": 8400.0,
+          "velocity": 0.4,
+          "duration_rows": 0.046666667,
+          "pan": -0.55,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 42,
+          "note": 14000.0,
+          "velocity": 0.36,
+          "duration_rows": 0.046666667,
+          "pan": 0.0,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 60,
+          "note": 10800.0,
+          "velocity": 0.38,
+          "duration_rows": 0.046666667,
+          "pan": 0.6,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 66,
+          "note": 8000.0,
+          "velocity": 0.3,
+          "duration_rows": 0.046666667,
+          "pan": -0.85,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 68,
+          "note": 8700.0,
+          "velocity": 0.3,
+          "duration_rows": 0.046666667,
+          "pan": 0.85,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 70,
+          "note": 9400.0,
+          "velocity": 0.3,
+          "duration_rows": 0.046666667,
+          "pan": -0.85,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 72,
+          "note": 10100.0,
+          "velocity": 0.3,
+          "duration_rows": 0.046666667,
+          "pan": 0.85,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 74,
+          "note": 10800.0,
+          "velocity": 0.3,
+          "duration_rows": 0.046666667,
+          "pan": -0.85,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 76,
+          "note": 11500.0,
+          "velocity": 0.3,
+          "duration_rows": 0.046666667,
+          "pan": 0.85,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 78,
+          "note": 12200.0,
+          "velocity": 0.3,
+          "duration_rows": 0.046666667,
+          "pan": -0.85,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 80,
+          "note": 12900.0,
+          "velocity": 0.3,
+          "duration_rows": 0.046666667,
+          "pan": 0.85,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 82,
+          "note": 13600.0,
+          "velocity": 0.3,
+          "duration_rows": 0.046666667,
+          "pan": -0.85,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 84,
+          "note": 8000.0,
+          "velocity": 0.3,
+          "duration_rows": 0.046666667,
+          "pan": 0.85,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 86,
+          "note": 8700.0,
+          "velocity": 0.3,
+          "duration_rows": 0.046666667,
+          "pan": -0.85,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 88,
+          "note": 9400.0,
+          "velocity": 0.3,
+          "duration_rows": 0.046666667,
+          "pan": 0.85,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 90,
+          "note": 10100.0,
+          "velocity": 0.3,
+          "duration_rows": 0.046666667,
+          "pan": -0.85,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 92,
+          "note": 10800.0,
+          "velocity": 0.3,
+          "duration_rows": 0.046666667,
+          "pan": 0.85,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 94,
+          "note": 11500.0,
+          "velocity": 0.3,
+          "duration_rows": 0.046666667,
+          "pan": -0.85,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 96,
+          "note": 12200.0,
+          "velocity": 0.3,
+          "duration_rows": 0.046666667,
+          "pan": 0.85,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 98,
+          "note": 12900.0,
+          "velocity": 0.3,
+          "duration_rows": 0.046666667,
+          "pan": -0.85,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 100,
+          "note": 13600.0,
+          "velocity": 0.3,
+          "duration_rows": 0.046666667,
+          "pan": 0.85,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 102,
+          "note": 8000.0,
+          "velocity": 0.3,
+          "duration_rows": 0.046666667,
+          "pan": -0.85,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 104,
+          "note": 8700.0,
+          "velocity": 0.3,
+          "duration_rows": 0.046666667,
+          "pan": 0.85,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 106,
+          "note": 9400.0,
+          "velocity": 0.3,
+          "duration_rows": 0.046666667,
+          "pan": -0.85,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 108,
+          "note": 10100.0,
+          "velocity": 0.3,
+          "duration_rows": 0.046666667,
+          "pan": 0.85,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 110,
+          "note": 10800.0,
+          "velocity": 0.3,
+          "duration_rows": 0.046666667,
+          "pan": -0.85,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 112,
+          "note": 11500.0,
+          "velocity": 0.3,
+          "duration_rows": 0.046666667,
+          "pan": 0.85,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 114,
+          "note": 12200.0,
+          "velocity": 0.3,
+          "duration_rows": 0.046666667,
+          "pan": -0.85,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 116,
+          "note": 12900.0,
+          "velocity": 0.3,
+          "duration_rows": 0.046666667,
+          "pan": 0.85,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 118,
+          "note": 13600.0,
+          "velocity": 0.3,
+          "duration_rows": 0.046666667,
+          "pan": -0.85,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 120,
+          "note": 8000.0,
+          "velocity": 0.3,
+          "duration_rows": 0.046666667,
+          "pan": 0.85,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 122,
+          "note": 8700.0,
+          "velocity": 0.3,
+          "duration_rows": 0.046666667,
+          "pan": -0.85,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 124,
+          "note": 9400.0,
+          "velocity": 0.3,
+          "duration_rows": 0.046666667,
+          "pan": 0.85,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 126,
+          "note": 10100.0,
+          "velocity": 0.3,
+          "duration_rows": 0.046666667,
+          "pan": -0.85,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 128,
+          "note": 10800.0,
+          "velocity": 0.3,
+          "duration_rows": 0.046666667,
+          "pan": 0.85,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 130,
+          "note": 11500.0,
+          "velocity": 0.3,
+          "duration_rows": 0.046666667,
+          "pan": -0.85,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 132,
+          "note": 12200.0,
+          "velocity": 0.3,
+          "duration_rows": 0.046666667,
+          "pan": 0.85,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 134,
+          "note": 12900.0,
+          "velocity": 0.3,
+          "duration_rows": 0.046666667,
+          "pan": -0.85,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 136,
+          "note": 13600.0,
+          "velocity": 0.3,
+          "duration_rows": 0.046666667,
+          "pan": 0.85,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 138,
+          "note": 8000.0,
+          "velocity": 0.3,
+          "duration_rows": 0.046666667,
+          "pan": -0.85,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 140,
+          "note": 8700.0,
+          "velocity": 0.3,
+          "duration_rows": 0.046666667,
+          "pan": 0.85,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 142,
+          "note": 9400.0,
+          "velocity": 0.3,
+          "duration_rows": 0.046666667,
+          "pan": -0.85,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 144,
+          "note": 10100.0,
+          "velocity": 0.3,
+          "duration_rows": 0.046666667,
+          "pan": 0.85,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 146,
+          "note": 10800.0,
+          "velocity": 0.3,
+          "duration_rows": 0.046666667,
+          "pan": -0.85,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 148,
+          "note": 11500.0,
+          "velocity": 0.3,
+          "duration_rows": 0.046666667,
+          "pan": 0.85,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 150,
+          "note": 12200.0,
+          "velocity": 0.3,
+          "duration_rows": 0.046666667,
+          "pan": -0.85,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 152,
+          "note": 12900.0,
+          "velocity": 0.3,
+          "duration_rows": 0.046666667,
+          "pan": 0.85,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 154,
+          "note": 13600.0,
+          "velocity": 0.3,
+          "duration_rows": 0.046666667,
+          "pan": -0.85,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 156,
+          "note": 8000.0,
+          "velocity": 0.3,
+          "duration_rows": 0.046666667,
+          "pan": 0.85,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 158,
+          "note": 8700.0,
+          "velocity": 0.3,
+          "duration_rows": 0.046666667,
+          "pan": -0.85,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 160,
+          "note": 9000.0,
+          "velocity": 0.28,
+          "duration_rows": 0.046666667,
+          "pan": -0.95,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 161,
+          "note": 9600.0,
+          "velocity": 0.28,
+          "duration_rows": 0.046666667,
+          "pan": 0.95,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 162,
+          "note": 10200.0,
+          "velocity": 0.28,
+          "duration_rows": 0.046666667,
+          "pan": -0.95,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 163,
+          "note": 10800.0,
+          "velocity": 0.28,
+          "duration_rows": 0.046666667,
+          "pan": 0.95,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 165,
+          "note": 12000.0,
+          "velocity": 0.28,
+          "duration_rows": 0.046666667,
+          "pan": 0.95,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 166,
+          "note": 12600.0,
+          "velocity": 0.28,
+          "duration_rows": 0.046666667,
+          "pan": -0.95,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 167,
+          "note": 13200.0,
+          "velocity": 0.28,
+          "duration_rows": 0.046666667,
+          "pan": 0.95,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 168,
+          "note": 13800.0,
+          "velocity": 0.28,
+          "duration_rows": 0.046666667,
+          "pan": -0.95,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 170,
+          "note": 15000.0,
+          "velocity": 0.28,
+          "duration_rows": 0.046666667,
+          "pan": -0.95,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 171,
+          "note": 9000.0,
+          "velocity": 0.28,
+          "duration_rows": 0.046666667,
+          "pan": 0.95,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 172,
+          "note": 9600.0,
+          "velocity": 0.28,
+          "duration_rows": 0.046666667,
+          "pan": -0.95,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 173,
+          "note": 10200.0,
+          "velocity": 0.28,
+          "duration_rows": 0.046666667,
+          "pan": 0.95,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 175,
+          "note": 11400.0,
+          "velocity": 0.28,
+          "duration_rows": 0.046666667,
+          "pan": 0.95,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 176,
+          "note": 12000.0,
+          "velocity": 0.28,
+          "duration_rows": 0.046666667,
+          "pan": -0.95,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 177,
+          "note": 12600.0,
+          "velocity": 0.28,
+          "duration_rows": 0.046666667,
+          "pan": 0.95,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 178,
+          "note": 13200.0,
+          "velocity": 0.28,
+          "duration_rows": 0.046666667,
+          "pan": -0.95,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 180,
+          "note": 14400.0,
+          "velocity": 0.28,
+          "duration_rows": 0.046666667,
+          "pan": -0.95,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 181,
+          "note": 15000.0,
+          "velocity": 0.28,
+          "duration_rows": 0.046666667,
+          "pan": 0.95,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 182,
+          "note": 9000.0,
+          "velocity": 0.28,
+          "duration_rows": 0.046666667,
+          "pan": -0.95,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 183,
+          "note": 9600.0,
+          "velocity": 0.28,
+          "duration_rows": 0.046666667,
+          "pan": 0.95,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 185,
+          "note": 10800.0,
+          "velocity": 0.28,
+          "duration_rows": 0.046666667,
+          "pan": 0.95,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 186,
+          "note": 11400.0,
+          "velocity": 0.28,
+          "duration_rows": 0.046666667,
+          "pan": -0.95,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 187,
+          "note": 12000.0,
+          "velocity": 0.28,
+          "duration_rows": 0.046666667,
+          "pan": 0.95,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 188,
+          "note": 12600.0,
+          "velocity": 0.28,
+          "duration_rows": 0.046666667,
+          "pan": -0.95,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 190,
+          "note": 13800.0,
+          "velocity": 0.28,
+          "duration_rows": 0.046666667,
+          "pan": -0.95,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 191,
+          "note": 14400.0,
+          "velocity": 0.28,
+          "duration_rows": 0.046666667,
+          "pan": 0.95,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 192,
+          "note": 15000.0,
+          "velocity": 0.28,
+          "duration_rows": 0.046666667,
+          "pan": -0.95,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 193,
+          "note": 9000.0,
+          "velocity": 0.28,
+          "duration_rows": 0.046666667,
+          "pan": 0.95,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 195,
+          "note": 10200.0,
+          "velocity": 0.28,
+          "duration_rows": 0.046666667,
+          "pan": 0.95,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 196,
+          "note": 10800.0,
+          "velocity": 0.28,
+          "duration_rows": 0.046666667,
+          "pan": -0.95,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 197,
+          "note": 11400.0,
+          "velocity": 0.28,
+          "duration_rows": 0.046666667,
+          "pan": 0.95,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 198,
+          "note": 12000.0,
+          "velocity": 0.28,
+          "duration_rows": 0.046666667,
+          "pan": -0.95,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 200,
+          "note": 13200.0,
+          "velocity": 0.28,
+          "duration_rows": 0.046666667,
+          "pan": -0.95,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 201,
+          "note": 13800.0,
+          "velocity": 0.28,
+          "duration_rows": 0.046666667,
+          "pan": 0.95,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 202,
+          "note": 14400.0,
+          "velocity": 0.28,
+          "duration_rows": 0.046666667,
+          "pan": -0.95,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 203,
+          "note": 15000.0,
+          "velocity": 0.28,
+          "duration_rows": 0.046666667,
+          "pan": 0.95,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 205,
+          "note": 9600.0,
+          "velocity": 0.28,
+          "duration_rows": 0.046666667,
+          "pan": 0.95,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 206,
+          "note": 10200.0,
+          "velocity": 0.28,
+          "duration_rows": 0.046666667,
+          "pan": -0.95,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 207,
+          "note": 10800.0,
+          "velocity": 0.28,
+          "duration_rows": 0.046666667,
+          "pan": 0.95,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 208,
+          "note": 11400.0,
+          "velocity": 0.28,
+          "duration_rows": 0.046666667,
+          "pan": -0.95,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 210,
+          "note": 12600.0,
+          "velocity": 0.28,
+          "duration_rows": 0.046666667,
+          "pan": -0.95,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 211,
+          "note": 13200.0,
+          "velocity": 0.28,
+          "duration_rows": 0.046666667,
+          "pan": 0.95,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 212,
+          "note": 13800.0,
+          "velocity": 0.28,
+          "duration_rows": 0.046666667,
+          "pan": -0.95,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 213,
+          "note": 14400.0,
+          "velocity": 0.28,
+          "duration_rows": 0.046666667,
+          "pan": 0.95,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 215,
+          "note": 9000.0,
+          "velocity": 0.28,
+          "duration_rows": 0.046666667,
+          "pan": 0.95,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 216,
+          "note": 9600.0,
+          "velocity": 0.28,
+          "duration_rows": 0.046666667,
+          "pan": -0.95,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 217,
+          "note": 10200.0,
+          "velocity": 0.28,
+          "duration_rows": 0.046666667,
+          "pan": 0.95,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 218,
+          "note": 10800.0,
+          "velocity": 0.28,
+          "duration_rows": 0.046666667,
+          "pan": -0.95,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 220,
+          "note": 12000.0,
+          "velocity": 0.28,
+          "duration_rows": 0.046666667,
+          "pan": -0.95,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 221,
+          "note": 12600.0,
+          "velocity": 0.28,
+          "duration_rows": 0.046666667,
+          "pan": 0.95,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 222,
+          "note": 13200.0,
+          "velocity": 0.28,
+          "duration_rows": 0.046666667,
+          "pan": -0.95,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 223,
+          "note": 13800.0,
+          "velocity": 0.28,
+          "duration_rows": 0.046666667,
+          "pan": 0.95,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 225,
+          "note": 15000.0,
+          "velocity": 0.28,
+          "duration_rows": 0.046666667,
+          "pan": 0.95,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 226,
+          "note": 9000.0,
+          "velocity": 0.28,
+          "duration_rows": 0.046666667,
+          "pan": -0.95,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 227,
+          "note": 9600.0,
+          "velocity": 0.28,
+          "duration_rows": 0.046666667,
+          "pan": 0.95,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 228,
+          "note": 10200.0,
+          "velocity": 0.28,
+          "duration_rows": 0.046666667,
+          "pan": -0.95,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 230,
+          "note": 11400.0,
+          "velocity": 0.28,
+          "duration_rows": 0.046666667,
+          "pan": -0.95,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 231,
+          "note": 12000.0,
+          "velocity": 0.28,
+          "duration_rows": 0.046666667,
+          "pan": 0.95,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 232,
+          "note": 12600.0,
+          "velocity": 0.28,
+          "duration_rows": 0.046666667,
+          "pan": -0.95,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 233,
+          "note": 13200.0,
+          "velocity": 0.28,
+          "duration_rows": 0.046666667,
+          "pan": 0.95,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 235,
+          "note": 14400.0,
+          "velocity": 0.28,
+          "duration_rows": 0.046666667,
+          "pan": 0.95,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 236,
+          "note": 15000.0,
+          "velocity": 0.28,
+          "duration_rows": 0.046666667,
+          "pan": -0.95,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 237,
+          "note": 9000.0,
+          "velocity": 0.28,
+          "duration_rows": 0.046666667,
+          "pan": 0.95,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 238,
+          "note": 9600.0,
+          "velocity": 0.28,
+          "duration_rows": 0.046666667,
+          "pan": -0.95,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 240,
+          "note": 10800.0,
+          "velocity": 0.28,
+          "duration_rows": 0.046666667,
+          "pan": -0.95,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 241,
+          "note": 11400.0,
+          "velocity": 0.28,
+          "duration_rows": 0.046666667,
+          "pan": 0.95,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 242,
+          "note": 12000.0,
+          "velocity": 0.28,
+          "duration_rows": 0.046666667,
+          "pan": -0.95,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 243,
+          "note": 12600.0,
+          "velocity": 0.28,
+          "duration_rows": 0.046666667,
+          "pan": 0.95,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 245,
+          "note": 13800.0,
+          "velocity": 0.28,
+          "duration_rows": 0.046666667,
+          "pan": 0.95,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 246,
+          "note": 14400.0,
+          "velocity": 0.28,
+          "duration_rows": 0.046666667,
+          "pan": -0.95,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 247,
+          "note": 15000.0,
+          "velocity": 0.28,
+          "duration_rows": 0.046666667,
+          "pan": 0.95,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 248,
+          "note": 9000.0,
+          "velocity": 0.28,
+          "duration_rows": 0.046666667,
+          "pan": -0.95,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 250,
+          "note": 10200.0,
+          "velocity": 0.28,
+          "duration_rows": 0.046666667,
+          "pan": -0.95,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 251,
+          "note": 10800.0,
+          "velocity": 0.28,
+          "duration_rows": 0.046666667,
+          "pan": 0.95,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 252,
+          "note": 11400.0,
+          "velocity": 0.28,
+          "duration_rows": 0.046666667,
+          "pan": -0.95,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 253,
+          "note": 12000.0,
+          "velocity": 0.28,
+          "duration_rows": 0.046666667,
+          "pan": 0.95,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 255,
+          "note": 13200.0,
+          "velocity": 0.28,
+          "duration_rows": 0.046666667,
+          "pan": 0.95,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 256,
+          "note": 8000.0,
+          "velocity": 0.32,
+          "duration_rows": 0.046666667,
+          "pan": -0.9,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 260,
+          "note": 8400.0,
+          "velocity": 0.27,
+          "duration_rows": 0.046666667,
+          "pan": 0.9,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 264,
+          "note": 8800.0,
+          "velocity": 0.23,
+          "duration_rows": 0.046666667,
+          "pan": -0.6,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 268,
+          "note": 9200.0,
+          "velocity": 0.2,
+          "duration_rows": 0.046666667,
+          "pan": 0.4,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 276,
+          "note": 9600.0,
+          "velocity": 0.17,
+          "duration_rows": 0.046666667,
+          "pan": -0.3,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 288,
+          "note": 10000.0,
+          "velocity": 0.14,
+          "duration_rows": 0.046666667,
+          "pan": 0.3,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 304,
+          "note": 10400.0,
+          "velocity": 0.1,
+          "duration_rows": 0.046666667,
+          "pan": 0.0,
+          "fx": [],
+          "pitch_env": null
+        }
+      ]
+    },
+    {
+      "name": "noise_tick",
+      "instrument": null,
+      "voice": "click",
+      "default_amp": 0.22,
+      "default_pan": 0.0,
+      "default_envelope": {
+        "kind": "ad",
+        "attack": 4,
+        "decay": 396
+      },
+      "default_fx": [],
+      "default_duration_rows": 0.06666667,
+      "default_pitch_env": null,
+      "cells": [
+        {
+          "row": 164,
+          "note": 11400.0,
+          "velocity": 0.22,
+          "duration_rows": 0.06666667,
+          "pan": -0.66499996,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 169,
+          "note": 14400.0,
+          "velocity": 0.22,
+          "duration_rows": 0.06666667,
+          "pan": 0.66499996,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 174,
+          "note": 10800.0,
+          "velocity": 0.22,
+          "duration_rows": 0.06666667,
+          "pan": -0.66499996,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 179,
+          "note": 13800.0,
+          "velocity": 0.22,
+          "duration_rows": 0.06666667,
+          "pan": 0.66499996,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 184,
+          "note": 10200.0,
+          "velocity": 0.22,
+          "duration_rows": 0.06666667,
+          "pan": -0.66499996,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 189,
+          "note": 13200.0,
+          "velocity": 0.22,
+          "duration_rows": 0.06666667,
+          "pan": 0.66499996,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 194,
+          "note": 9600.0,
+          "velocity": 0.22,
+          "duration_rows": 0.06666667,
+          "pan": -0.66499996,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 199,
+          "note": 12600.0,
+          "velocity": 0.22,
+          "duration_rows": 0.06666667,
+          "pan": 0.66499996,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 204,
+          "note": 9000.0,
+          "velocity": 0.22,
+          "duration_rows": 0.06666667,
+          "pan": -0.66499996,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 209,
+          "note": 12000.0,
+          "velocity": 0.22,
+          "duration_rows": 0.06666667,
+          "pan": 0.66499996,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 214,
+          "note": 15000.0,
+          "velocity": 0.22,
+          "duration_rows": 0.06666667,
+          "pan": -0.66499996,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 219,
+          "note": 11400.0,
+          "velocity": 0.22,
+          "duration_rows": 0.06666667,
+          "pan": 0.66499996,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 224,
+          "note": 14400.0,
+          "velocity": 0.22,
+          "duration_rows": 0.06666667,
+          "pan": -0.66499996,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 229,
+          "note": 10800.0,
+          "velocity": 0.22,
+          "duration_rows": 0.06666667,
+          "pan": 0.66499996,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 234,
+          "note": 13800.0,
+          "velocity": 0.22,
+          "duration_rows": 0.06666667,
+          "pan": -0.66499996,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 239,
+          "note": 10200.0,
+          "velocity": 0.22,
+          "duration_rows": 0.06666667,
+          "pan": 0.66499996,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 244,
+          "note": 13200.0,
+          "velocity": 0.22,
+          "duration_rows": 0.06666667,
+          "pan": -0.66499996,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 249,
+          "note": 9600.0,
+          "velocity": 0.22,
+          "duration_rows": 0.06666667,
+          "pan": 0.66499996,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 254,
+          "note": 12600.0,
+          "velocity": 0.22,
+          "duration_rows": 0.06666667,
+          "pan": -0.66499996,
+          "fx": [],
+          "pitch_env": null
+        }
+      ]
+    },
+    {
+      "name": "pulse",
+      "instrument": null,
+      "voice": "sine",
+      "default_amp": 0.28,
+      "default_pan": 0.0,
+      "default_envelope": {
+        "kind": "ad",
+        "attack": 80,
+        "decay": 4720
+      },
+      "default_fx": [],
+      "default_duration_rows": 0.8,
+      "default_pitch_env": null,
+      "cells": [
+        {
+          "row": 64,
+          "note": 220.0,
+          "velocity": null,
+          "duration_rows": 0.8,
+          "pan": null,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 68,
+          "note": 233.08,
+          "velocity": null,
+          "duration_rows": 0.8,
+          "pan": null,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 72,
+          "note": 220.0,
+          "velocity": null,
+          "duration_rows": 0.8,
+          "pan": null,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 76,
+          "note": 261.63,
+          "velocity": null,
+          "duration_rows": 0.8,
+          "pan": null,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 80,
+          "note": 220.0,
+          "velocity": null,
+          "duration_rows": 0.8,
+          "pan": null,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 84,
+          "note": 233.08,
+          "velocity": null,
+          "duration_rows": 0.8,
+          "pan": null,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 88,
+          "note": 246.94,
+          "velocity": null,
+          "duration_rows": 0.8,
+          "pan": null,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 92,
+          "note": 261.63,
+          "velocity": null,
+          "duration_rows": 0.8,
+          "pan": null,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 96,
+          "note": 220.0,
+          "velocity": null,
+          "duration_rows": 0.8,
+          "pan": null,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 100,
+          "note": 233.08,
+          "velocity": null,
+          "duration_rows": 0.8,
+          "pan": null,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 104,
+          "note": 220.0,
+          "velocity": null,
+          "duration_rows": 0.8,
+          "pan": null,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 108,
+          "note": 261.63,
+          "velocity": null,
+          "duration_rows": 0.8,
+          "pan": null,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 112,
+          "note": 220.0,
+          "velocity": null,
+          "duration_rows": 0.8,
+          "pan": null,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 116,
+          "note": 233.08,
+          "velocity": null,
+          "duration_rows": 0.8,
+          "pan": null,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 120,
+          "note": 246.94,
+          "velocity": null,
+          "duration_rows": 0.8,
+          "pan": null,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 124,
+          "note": 261.63,
+          "velocity": null,
+          "duration_rows": 0.8,
+          "pan": null,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 128,
+          "note": 220.0,
+          "velocity": null,
+          "duration_rows": 0.8,
+          "pan": null,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 132,
+          "note": 233.08,
+          "velocity": null,
+          "duration_rows": 0.8,
+          "pan": null,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 136,
+          "note": 220.0,
+          "velocity": null,
+          "duration_rows": 0.8,
+          "pan": null,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 140,
+          "note": 261.63,
+          "velocity": null,
+          "duration_rows": 0.8,
+          "pan": null,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 144,
+          "note": 220.0,
+          "velocity": null,
+          "duration_rows": 0.8,
+          "pan": null,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 148,
+          "note": 233.08,
+          "velocity": null,
+          "duration_rows": 0.8,
+          "pan": null,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 152,
+          "note": 246.94,
+          "velocity": null,
+          "duration_rows": 0.8,
+          "pan": null,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 156,
+          "note": 261.63,
+          "velocity": null,
+          "duration_rows": 0.8,
+          "pan": null,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 160,
+          "note": 220.0,
+          "velocity": null,
+          "duration_rows": 0.53333336,
+          "pan": null,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 162,
+          "note": 233.08,
+          "velocity": null,
+          "duration_rows": 0.53333336,
+          "pan": null,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 164,
+          "note": 220.0,
+          "velocity": null,
+          "duration_rows": 0.53333336,
+          "pan": null,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 166,
+          "note": 261.63,
+          "velocity": null,
+          "duration_rows": 0.53333336,
+          "pan": null,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 168,
+          "note": 220.0,
+          "velocity": null,
+          "duration_rows": 0.53333336,
+          "pan": null,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 170,
+          "note": 233.08,
+          "velocity": null,
+          "duration_rows": 0.53333336,
+          "pan": null,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 172,
+          "note": 246.94,
+          "velocity": null,
+          "duration_rows": 0.53333336,
+          "pan": null,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 174,
+          "note": 261.63,
+          "velocity": null,
+          "duration_rows": 0.53333336,
+          "pan": null,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 176,
+          "note": 220.0,
+          "velocity": null,
+          "duration_rows": 0.53333336,
+          "pan": null,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 178,
+          "note": 233.08,
+          "velocity": null,
+          "duration_rows": 0.53333336,
+          "pan": null,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 180,
+          "note": 220.0,
+          "velocity": null,
+          "duration_rows": 0.53333336,
+          "pan": null,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 182,
+          "note": 261.63,
+          "velocity": null,
+          "duration_rows": 0.53333336,
+          "pan": null,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 184,
+          "note": 220.0,
+          "velocity": null,
+          "duration_rows": 0.53333336,
+          "pan": null,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 186,
+          "note": 233.08,
+          "velocity": null,
+          "duration_rows": 0.53333336,
+          "pan": null,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 188,
+          "note": 246.94,
+          "velocity": null,
+          "duration_rows": 0.53333336,
+          "pan": null,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 190,
+          "note": 261.63,
+          "velocity": null,
+          "duration_rows": 0.53333336,
+          "pan": null,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 192,
+          "note": 220.0,
+          "velocity": null,
+          "duration_rows": 0.53333336,
+          "pan": null,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 194,
+          "note": 233.08,
+          "velocity": null,
+          "duration_rows": 0.53333336,
+          "pan": null,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 196,
+          "note": 220.0,
+          "velocity": null,
+          "duration_rows": 0.53333336,
+          "pan": null,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 198,
+          "note": 261.63,
+          "velocity": null,
+          "duration_rows": 0.53333336,
+          "pan": null,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 200,
+          "note": 220.0,
+          "velocity": null,
+          "duration_rows": 0.53333336,
+          "pan": null,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 202,
+          "note": 233.08,
+          "velocity": null,
+          "duration_rows": 0.53333336,
+          "pan": null,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 204,
+          "note": 246.94,
+          "velocity": null,
+          "duration_rows": 0.53333336,
+          "pan": null,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 206,
+          "note": 261.63,
+          "velocity": null,
+          "duration_rows": 0.53333336,
+          "pan": null,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 208,
+          "note": 220.0,
+          "velocity": null,
+          "duration_rows": 0.53333336,
+          "pan": null,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 210,
+          "note": 233.08,
+          "velocity": null,
+          "duration_rows": 0.53333336,
+          "pan": null,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 212,
+          "note": 220.0,
+          "velocity": null,
+          "duration_rows": 0.53333336,
+          "pan": null,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 214,
+          "note": 261.63,
+          "velocity": null,
+          "duration_rows": 0.53333336,
+          "pan": null,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 216,
+          "note": 220.0,
+          "velocity": null,
+          "duration_rows": 0.53333336,
+          "pan": null,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 218,
+          "note": 233.08,
+          "velocity": null,
+          "duration_rows": 0.53333336,
+          "pan": null,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 220,
+          "note": 246.94,
+          "velocity": null,
+          "duration_rows": 0.53333336,
+          "pan": null,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 222,
+          "note": 261.63,
+          "velocity": null,
+          "duration_rows": 0.53333336,
+          "pan": null,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 224,
+          "note": 220.0,
+          "velocity": null,
+          "duration_rows": 0.53333336,
+          "pan": null,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 226,
+          "note": 233.08,
+          "velocity": null,
+          "duration_rows": 0.53333336,
+          "pan": null,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 228,
+          "note": 220.0,
+          "velocity": null,
+          "duration_rows": 0.53333336,
+          "pan": null,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 230,
+          "note": 261.63,
+          "velocity": null,
+          "duration_rows": 0.53333336,
+          "pan": null,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 232,
+          "note": 220.0,
+          "velocity": null,
+          "duration_rows": 0.53333336,
+          "pan": null,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 234,
+          "note": 233.08,
+          "velocity": null,
+          "duration_rows": 0.53333336,
+          "pan": null,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 236,
+          "note": 246.94,
+          "velocity": null,
+          "duration_rows": 0.53333336,
+          "pan": null,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 238,
+          "note": 261.63,
+          "velocity": null,
+          "duration_rows": 0.53333336,
+          "pan": null,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 240,
+          "note": 220.0,
+          "velocity": null,
+          "duration_rows": 0.53333336,
+          "pan": null,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 242,
+          "note": 233.08,
+          "velocity": null,
+          "duration_rows": 0.53333336,
+          "pan": null,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 244,
+          "note": 220.0,
+          "velocity": null,
+          "duration_rows": 0.53333336,
+          "pan": null,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 246,
+          "note": 261.63,
+          "velocity": null,
+          "duration_rows": 0.53333336,
+          "pan": null,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 248,
+          "note": 220.0,
+          "velocity": null,
+          "duration_rows": 0.53333336,
+          "pan": null,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 250,
+          "note": 233.08,
+          "velocity": null,
+          "duration_rows": 0.53333336,
+          "pan": null,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 252,
+          "note": 246.94,
+          "velocity": null,
+          "duration_rows": 0.53333336,
+          "pan": null,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 254,
+          "note": 261.63,
+          "velocity": null,
+          "duration_rows": 0.53333336,
+          "pan": null,
+          "fx": [],
+          "pitch_env": null
+        }
+      ]
+    },
+    {
+      "name": "sub",
+      "instrument": null,
+      "voice": "sine",
+      "default_amp": 0.7,
+      "default_pan": 0.0,
+      "default_envelope": {
+        "kind": "exp",
+        "attack": 30,
+        "tau": 3000
+      },
+      "default_fx": [],
+      "default_duration_rows": 1.3333334,
+      "default_pitch_env": {
+        "from_ratio": 3.5,
+        "to_ratio": 1.0,
+        "time_samples": 2400,
+        "shape": "exp"
+      },
+      "cells": [
+        {
+          "row": 64,
+          "note": 45.0,
+          "velocity": null,
+          "duration_rows": 1.3333334,
+          "pan": null,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 72,
+          "note": 45.0,
+          "velocity": null,
+          "duration_rows": 1.3333334,
+          "pan": null,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 80,
+          "note": 45.0,
+          "velocity": null,
+          "duration_rows": 1.3333334,
+          "pan": null,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 88,
+          "note": 45.0,
+          "velocity": null,
+          "duration_rows": 1.3333334,
+          "pan": null,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 96,
+          "note": 45.0,
+          "velocity": null,
+          "duration_rows": 1.3333334,
+          "pan": null,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 104,
+          "note": 45.0,
+          "velocity": null,
+          "duration_rows": 1.3333334,
+          "pan": null,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 112,
+          "note": 45.0,
+          "velocity": null,
+          "duration_rows": 1.3333334,
+          "pan": null,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 120,
+          "note": 45.0,
+          "velocity": null,
+          "duration_rows": 1.3333334,
+          "pan": null,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 128,
+          "note": 45.0,
+          "velocity": null,
+          "duration_rows": 1.3333334,
+          "pan": null,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 136,
+          "note": 45.0,
+          "velocity": null,
+          "duration_rows": 1.3333334,
+          "pan": null,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 144,
+          "note": 45.0,
+          "velocity": null,
+          "duration_rows": 1.3333334,
+          "pan": null,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 152,
+          "note": 45.0,
+          "velocity": null,
+          "duration_rows": 1.3333334,
+          "pan": null,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 160,
+          "note": 45.0,
+          "velocity": null,
+          "duration_rows": 1.3333334,
+          "pan": null,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 164,
+          "note": 45.0,
+          "velocity": null,
+          "duration_rows": 1.3333334,
+          "pan": null,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 168,
+          "note": 45.0,
+          "velocity": null,
+          "duration_rows": 1.3333334,
+          "pan": null,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 172,
+          "note": 45.0,
+          "velocity": null,
+          "duration_rows": 1.3333334,
+          "pan": null,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 176,
+          "note": 45.0,
+          "velocity": null,
+          "duration_rows": 1.3333334,
+          "pan": null,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 180,
+          "note": 45.0,
+          "velocity": null,
+          "duration_rows": 1.3333334,
+          "pan": null,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 184,
+          "note": 45.0,
+          "velocity": null,
+          "duration_rows": 1.3333334,
+          "pan": null,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 188,
+          "note": 45.0,
+          "velocity": null,
+          "duration_rows": 1.3333334,
+          "pan": null,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 192,
+          "note": 45.0,
+          "velocity": null,
+          "duration_rows": 1.3333334,
+          "pan": null,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 196,
+          "note": 45.0,
+          "velocity": null,
+          "duration_rows": 1.3333334,
+          "pan": null,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 200,
+          "note": 45.0,
+          "velocity": null,
+          "duration_rows": 1.3333334,
+          "pan": null,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 204,
+          "note": 45.0,
+          "velocity": null,
+          "duration_rows": 1.3333334,
+          "pan": null,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 208,
+          "note": 45.0,
+          "velocity": null,
+          "duration_rows": 1.3333334,
+          "pan": null,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 212,
+          "note": 45.0,
+          "velocity": null,
+          "duration_rows": 1.3333334,
+          "pan": null,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 216,
+          "note": 45.0,
+          "velocity": null,
+          "duration_rows": 1.3333334,
+          "pan": null,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 220,
+          "note": 45.0,
+          "velocity": null,
+          "duration_rows": 1.3333334,
+          "pan": null,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 224,
+          "note": 45.0,
+          "velocity": null,
+          "duration_rows": 1.3333334,
+          "pan": null,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 228,
+          "note": 45.0,
+          "velocity": null,
+          "duration_rows": 1.3333334,
+          "pan": null,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 232,
+          "note": 45.0,
+          "velocity": null,
+          "duration_rows": 1.3333334,
+          "pan": null,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 236,
+          "note": 45.0,
+          "velocity": null,
+          "duration_rows": 1.3333334,
+          "pan": null,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 240,
+          "note": 45.0,
+          "velocity": null,
+          "duration_rows": 1.3333334,
+          "pan": null,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 244,
+          "note": 45.0,
+          "velocity": null,
+          "duration_rows": 1.3333334,
+          "pan": null,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 248,
+          "note": 45.0,
+          "velocity": null,
+          "duration_rows": 1.3333334,
+          "pan": null,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 252,
+          "note": 45.0,
+          "velocity": null,
+          "duration_rows": 1.3333334,
+          "pan": null,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 272,
+          "note": 38.0,
+          "velocity": 0.8,
+          "duration_rows": 4.0,
+          "pan": 0.0,
+          "fx": [],
+          "pitch_env": null
+        }
+      ]
+    },
+    {
+      "name": "arp",
+      "instrument": null,
+      "voice": "sine",
+      "default_amp": 0.18,
+      "default_pan": 0.0,
+      "default_envelope": {
+        "kind": "exp",
+        "attack": 20,
+        "tau": 1200
+      },
+      "default_fx": [
+        {
+          "kind": "bitcrush",
+          "bits": 4
+        }
+      ],
+      "default_duration_rows": 0.4,
+      "default_pitch_env": null,
+      "cells": [
+        {
+          "row": 161,
+          "note": 440.0,
+          "velocity": 0.18,
+          "duration_rows": 0.4,
+          "pan": -0.4,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 163,
+          "note": 660.0,
+          "velocity": 0.18,
+          "duration_rows": 0.4,
+          "pan": 0.4,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 165,
+          "note": 880.0,
+          "velocity": 0.18,
+          "duration_rows": 0.4,
+          "pan": -0.4,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 167,
+          "note": 660.0,
+          "velocity": 0.18,
+          "duration_rows": 0.4,
+          "pan": 0.4,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 169,
+          "note": 440.0,
+          "velocity": 0.18,
+          "duration_rows": 0.4,
+          "pan": -0.4,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 171,
+          "note": 587.33,
+          "velocity": 0.18,
+          "duration_rows": 0.4,
+          "pan": 0.4,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 173,
+          "note": 880.0,
+          "velocity": 0.18,
+          "duration_rows": 0.4,
+          "pan": -0.4,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 175,
+          "note": 587.33,
+          "velocity": 0.18,
+          "duration_rows": 0.4,
+          "pan": 0.4,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 177,
+          "note": 440.0,
+          "velocity": 0.18,
+          "duration_rows": 0.4,
+          "pan": -0.4,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 179,
+          "note": 660.0,
+          "velocity": 0.18,
+          "duration_rows": 0.4,
+          "pan": 0.4,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 181,
+          "note": 880.0,
+          "velocity": 0.18,
+          "duration_rows": 0.4,
+          "pan": -0.4,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 183,
+          "note": 660.0,
+          "velocity": 0.18,
+          "duration_rows": 0.4,
+          "pan": 0.4,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 185,
+          "note": 440.0,
+          "velocity": 0.18,
+          "duration_rows": 0.4,
+          "pan": -0.4,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 187,
+          "note": 587.33,
+          "velocity": 0.18,
+          "duration_rows": 0.4,
+          "pan": 0.4,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 189,
+          "note": 880.0,
+          "velocity": 0.18,
+          "duration_rows": 0.4,
+          "pan": -0.4,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 191,
+          "note": 587.33,
+          "velocity": 0.18,
+          "duration_rows": 0.4,
+          "pan": 0.4,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 193,
+          "note": 440.0,
+          "velocity": 0.18,
+          "duration_rows": 0.4,
+          "pan": -0.4,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 195,
+          "note": 660.0,
+          "velocity": 0.18,
+          "duration_rows": 0.4,
+          "pan": 0.4,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 197,
+          "note": 880.0,
+          "velocity": 0.18,
+          "duration_rows": 0.4,
+          "pan": -0.4,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 199,
+          "note": 660.0,
+          "velocity": 0.18,
+          "duration_rows": 0.4,
+          "pan": 0.4,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 201,
+          "note": 440.0,
+          "velocity": 0.18,
+          "duration_rows": 0.4,
+          "pan": -0.4,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 203,
+          "note": 587.33,
+          "velocity": 0.18,
+          "duration_rows": 0.4,
+          "pan": 0.4,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 205,
+          "note": 880.0,
+          "velocity": 0.18,
+          "duration_rows": 0.4,
+          "pan": -0.4,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 207,
+          "note": 587.33,
+          "velocity": 0.18,
+          "duration_rows": 0.4,
+          "pan": 0.4,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 209,
+          "note": 440.0,
+          "velocity": 0.18,
+          "duration_rows": 0.4,
+          "pan": -0.4,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 211,
+          "note": 660.0,
+          "velocity": 0.18,
+          "duration_rows": 0.4,
+          "pan": 0.4,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 213,
+          "note": 880.0,
+          "velocity": 0.18,
+          "duration_rows": 0.4,
+          "pan": -0.4,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 215,
+          "note": 660.0,
+          "velocity": 0.18,
+          "duration_rows": 0.4,
+          "pan": 0.4,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 217,
+          "note": 440.0,
+          "velocity": 0.18,
+          "duration_rows": 0.4,
+          "pan": -0.4,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 219,
+          "note": 587.33,
+          "velocity": 0.18,
+          "duration_rows": 0.4,
+          "pan": 0.4,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 221,
+          "note": 880.0,
+          "velocity": 0.18,
+          "duration_rows": 0.4,
+          "pan": -0.4,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 223,
+          "note": 587.33,
+          "velocity": 0.18,
+          "duration_rows": 0.4,
+          "pan": 0.4,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 225,
+          "note": 440.0,
+          "velocity": 0.18,
+          "duration_rows": 0.4,
+          "pan": -0.4,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 227,
+          "note": 660.0,
+          "velocity": 0.18,
+          "duration_rows": 0.4,
+          "pan": 0.4,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 229,
+          "note": 880.0,
+          "velocity": 0.18,
+          "duration_rows": 0.4,
+          "pan": -0.4,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 231,
+          "note": 660.0,
+          "velocity": 0.18,
+          "duration_rows": 0.4,
+          "pan": 0.4,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 233,
+          "note": 440.0,
+          "velocity": 0.18,
+          "duration_rows": 0.4,
+          "pan": -0.4,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 235,
+          "note": 587.33,
+          "velocity": 0.18,
+          "duration_rows": 0.4,
+          "pan": 0.4,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 237,
+          "note": 880.0,
+          "velocity": 0.18,
+          "duration_rows": 0.4,
+          "pan": -0.4,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 239,
+          "note": 587.33,
+          "velocity": 0.18,
+          "duration_rows": 0.4,
+          "pan": 0.4,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 241,
+          "note": 440.0,
+          "velocity": 0.18,
+          "duration_rows": 0.4,
+          "pan": -0.4,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 243,
+          "note": 660.0,
+          "velocity": 0.18,
+          "duration_rows": 0.4,
+          "pan": 0.4,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 245,
+          "note": 880.0,
+          "velocity": 0.18,
+          "duration_rows": 0.4,
+          "pan": -0.4,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 247,
+          "note": 660.0,
+          "velocity": 0.18,
+          "duration_rows": 0.4,
+          "pan": 0.4,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 249,
+          "note": 440.0,
+          "velocity": 0.18,
+          "duration_rows": 0.4,
+          "pan": -0.4,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 251,
+          "note": 587.33,
+          "velocity": 0.18,
+          "duration_rows": 0.4,
+          "pan": 0.4,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 253,
+          "note": 880.0,
+          "velocity": 0.18,
+          "duration_rows": 0.4,
+          "pan": -0.4,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 255,
+          "note": 587.33,
+          "velocity": 0.18,
+          "duration_rows": 0.4,
+          "pan": 0.4,
+          "fx": [],
+          "pitch_env": null
+        }
+      ]
+    },
+    {
+      "name": "data",
+      "instrument": null,
+      "voice": "sine",
+      "default_amp": 0.18,
+      "default_pan": 0.0,
+      "default_envelope": {
+        "kind": "ad",
+        "attack": 40,
+        "decay": 3960
+      },
+      "default_fx": [
+        {
+          "kind": "sample_rate_reduce",
+          "factor": 10
+        },
+        {
+          "kind": "bitcrush",
+          "bits": 5
+        }
+      ],
+      "default_duration_rows": 0.6666667,
+      "default_pitch_env": null,
+      "cells": [
+        {
+          "row": 164,
+          "note": 1500.0,
+          "velocity": null,
+          "duration_rows": 0.6666667,
+          "pan": null,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 172,
+          "note": 1500.0,
+          "velocity": null,
+          "duration_rows": 0.6666667,
+          "pan": null,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 180,
+          "note": 1500.0,
+          "velocity": null,
+          "duration_rows": 0.6666667,
+          "pan": null,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 188,
+          "note": 1500.0,
+          "velocity": null,
+          "duration_rows": 0.6666667,
+          "pan": null,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 196,
+          "note": 1500.0,
+          "velocity": null,
+          "duration_rows": 0.6666667,
+          "pan": null,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 204,
+          "note": 1500.0,
+          "velocity": null,
+          "duration_rows": 0.6666667,
+          "pan": null,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 212,
+          "note": 1500.0,
+          "velocity": null,
+          "duration_rows": 0.6666667,
+          "pan": null,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 220,
+          "note": 1500.0,
+          "velocity": null,
+          "duration_rows": 0.6666667,
+          "pan": null,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 228,
+          "note": 1500.0,
+          "velocity": null,
+          "duration_rows": 0.6666667,
+          "pan": null,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 236,
+          "note": 1500.0,
+          "velocity": null,
+          "duration_rows": 0.6666667,
+          "pan": null,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 244,
+          "note": 1500.0,
+          "velocity": null,
+          "duration_rows": 0.6666667,
+          "pan": null,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 252,
+          "note": 1500.0,
+          "velocity": null,
+          "duration_rows": 0.6666667,
+          "pan": null,
+          "fx": [],
+          "pitch_env": null
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "title": "noto_alphabet",
+    "author": "handmade/programmatic"
+  }
+}

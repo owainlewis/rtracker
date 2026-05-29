@@ -1,1 +1,178 @@
-@examples/aphex_bell.json
+{
+  "sample_rate": 48000,
+  "tempo_bpm": 78.0,
+  "lines_per_beat": 2,
+  "rows": 32,
+  "voices": {},
+  "samples": {},
+  "tracks": [
+    {
+      "name": "lead",
+      "instrument": "aphex_pluck",
+      "voice": null,
+      "default_amp": null,
+      "default_pan": null,
+      "default_envelope": null,
+      "default_fx": null,
+      "default_duration_rows": null,
+      "default_pitch_env": null,
+      "cells": [
+        {
+          "row": 0,
+          "note": "A-3",
+          "velocity": null,
+          "duration_rows": 6.0,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 6,
+          "note": "A-3",
+          "velocity": null,
+          "duration_rows": 6.0,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 12,
+          "note": "G-5",
+          "velocity": null,
+          "duration_rows": 4.0,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 16,
+          "note": "F-5",
+          "velocity": null,
+          "duration_rows": 6.0,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 22,
+          "note": "Eb5",
+          "velocity": null,
+          "duration_rows": 6.0,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 28,
+          "note": "C-5",
+          "velocity": null,
+          "duration_rows": 8.0,
+          "fx": [],
+          "pitch_env": null
+        }
+      ]
+    },
+    {
+      "name": "counter",
+      "instrument": "glassy_bell",
+      "voice": null,
+      "default_amp": 0.18,
+      "default_pan": null,
+      "default_envelope": null,
+      "default_fx": null,
+      "default_duration_rows": null,
+      "default_pitch_env": null,
+      "cells": [
+        {
+          "row": 3,
+          "note": "G-5",
+          "velocity": null,
+          "duration_rows": null,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 9,
+          "note": "Bb5",
+          "velocity": null,
+          "duration_rows": null,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 15,
+          "note": "C-6",
+          "velocity": null,
+          "duration_rows": null,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 19,
+          "note": "Bb5",
+          "velocity": null,
+          "duration_rows": null,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 25,
+          "note": "G-5",
+          "velocity": null,
+          "duration_rows": null,
+          "fx": [],
+          "pitch_env": null
+        }
+      ]
+    },
+    {
+      "name": "pad",
+      "instrument": "warm_pad",
+      "voice": null,
+      "default_amp": 0.22,
+      "default_pan": null,
+      "default_envelope": null,
+      "default_fx": null,
+      "default_duration_rows": null,
+      "default_pitch_env": null,
+      "cells": [
+        {
+          "row": 0,
+          "note": "C-3",
+          "velocity": null,
+          "duration_rows": 16.0,
+          "fx": [],
+          "pitch_env": null
+        },
+        {
+          "row": 16,
+          "note": "F-3",
+          "velocity": null,
+          "duration_rows": 16.0,
+          "fx": [],
+          "pitch_env": null
+        }
+      ]
+    },
+    {
+      "name": "sub",
+      "instrument": "dark_drone",
+      "voice": null,
+      "default_amp": 0.14,
+      "default_pan": null,
+      "default_envelope": null,
+      "default_fx": null,
+      "default_duration_rows": null,
+      "default_pitch_env": null,
+      "cells": [
+        {
+          "row": 0,
+          "note": "C-2",
+          "velocity": null,
+          "duration_rows": 32.0,
+          "fx": [],
+          "pitch_env": null
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "title": "aphex_bell",
+    "author": "handmade"
+  }
+}

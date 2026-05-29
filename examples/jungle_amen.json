@@ -1,0 +1,591 @@
+{
+  "sample_rate": 48000,
+  "tempo_bpm": 160,
+  "lines_per_beat": 4,
+  "rows": 32,
+  "voices": {
+    "amen_00": {
+      "kind": "sample",
+      "sample_id": "amen_00",
+      "loop_mode": "one_shot"
+    },
+    "amen_01": {
+      "kind": "sample",
+      "sample_id": "amen_01",
+      "loop_mode": "one_shot"
+    },
+    "amen_02": {
+      "kind": "sample",
+      "sample_id": "amen_02",
+      "loop_mode": "one_shot"
+    },
+    "amen_03": {
+      "kind": "sample",
+      "sample_id": "amen_03",
+      "loop_mode": "one_shot"
+    },
+    "amen_04": {
+      "kind": "sample",
+      "sample_id": "amen_04",
+      "loop_mode": "one_shot"
+    },
+    "amen_05": {
+      "kind": "sample",
+      "sample_id": "amen_05",
+      "loop_mode": "one_shot"
+    },
+    "amen_06": {
+      "kind": "sample",
+      "sample_id": "amen_06",
+      "loop_mode": "one_shot"
+    },
+    "amen_07": {
+      "kind": "sample",
+      "sample_id": "amen_07",
+      "loop_mode": "one_shot"
+    },
+    "amen_08": {
+      "kind": "sample",
+      "sample_id": "amen_08",
+      "loop_mode": "one_shot"
+    },
+    "amen_09": {
+      "kind": "sample",
+      "sample_id": "amen_09",
+      "loop_mode": "one_shot"
+    },
+    "amen_10": {
+      "kind": "sample",
+      "sample_id": "amen_10",
+      "loop_mode": "one_shot"
+    },
+    "amen_11": {
+      "kind": "sample",
+      "sample_id": "amen_11",
+      "loop_mode": "one_shot"
+    },
+    "amen_12": {
+      "kind": "sample",
+      "sample_id": "amen_12",
+      "loop_mode": "one_shot"
+    },
+    "amen_13": {
+      "kind": "sample",
+      "sample_id": "amen_13",
+      "loop_mode": "one_shot"
+    },
+    "amen_14": {
+      "kind": "sample",
+      "sample_id": "amen_14",
+      "loop_mode": "one_shot"
+    },
+    "amen_15": {
+      "kind": "sample",
+      "sample_id": "amen_15",
+      "loop_mode": "one_shot"
+    },
+    "sub": {
+      "kind": "sine",
+      "default_pan": 0.0
+    }
+  },
+  "samples": {
+    "amen_00": {
+      "path": "../mods/junglemix_samples/i11_s0_amen_break_fancy_160bp.wav",
+      "start_sample": 0,
+      "end_sample": 4500
+    },
+    "amen_01": {
+      "path": "../mods/junglemix_samples/i11_s0_amen_break_fancy_160bp.wav",
+      "start_sample": 4500,
+      "end_sample": 9000
+    },
+    "amen_02": {
+      "path": "../mods/junglemix_samples/i11_s0_amen_break_fancy_160bp.wav",
+      "start_sample": 9000,
+      "end_sample": 13500
+    },
+    "amen_03": {
+      "path": "../mods/junglemix_samples/i11_s0_amen_break_fancy_160bp.wav",
+      "start_sample": 13500,
+      "end_sample": 18000
+    },
+    "amen_04": {
+      "path": "../mods/junglemix_samples/i11_s0_amen_break_fancy_160bp.wav",
+      "start_sample": 18000,
+      "end_sample": 22500
+    },
+    "amen_05": {
+      "path": "../mods/junglemix_samples/i11_s0_amen_break_fancy_160bp.wav",
+      "start_sample": 22500,
+      "end_sample": 27000
+    },
+    "amen_06": {
+      "path": "../mods/junglemix_samples/i11_s0_amen_break_fancy_160bp.wav",
+      "start_sample": 27000,
+      "end_sample": 31500
+    },
+    "amen_07": {
+      "path": "../mods/junglemix_samples/i11_s0_amen_break_fancy_160bp.wav",
+      "start_sample": 31500,
+      "end_sample": 36000
+    },
+    "amen_08": {
+      "path": "../mods/junglemix_samples/i11_s0_amen_break_fancy_160bp.wav",
+      "start_sample": 36000,
+      "end_sample": 40500
+    },
+    "amen_09": {
+      "path": "../mods/junglemix_samples/i11_s0_amen_break_fancy_160bp.wav",
+      "start_sample": 40500,
+      "end_sample": 45000
+    },
+    "amen_10": {
+      "path": "../mods/junglemix_samples/i11_s0_amen_break_fancy_160bp.wav",
+      "start_sample": 45000,
+      "end_sample": 49500
+    },
+    "amen_11": {
+      "path": "../mods/junglemix_samples/i11_s0_amen_break_fancy_160bp.wav",
+      "start_sample": 49500,
+      "end_sample": 54000
+    },
+    "amen_12": {
+      "path": "../mods/junglemix_samples/i11_s0_amen_break_fancy_160bp.wav",
+      "start_sample": 54000,
+      "end_sample": 58500
+    },
+    "amen_13": {
+      "path": "../mods/junglemix_samples/i11_s0_amen_break_fancy_160bp.wav",
+      "start_sample": 58500,
+      "end_sample": 63000
+    },
+    "amen_14": {
+      "path": "../mods/junglemix_samples/i11_s0_amen_break_fancy_160bp.wav",
+      "start_sample": 63000,
+      "end_sample": 67500
+    },
+    "amen_15": {
+      "path": "../mods/junglemix_samples/i11_s0_amen_break_fancy_160bp.wav",
+      "start_sample": 67500,
+      "end_sample": 72000
+    }
+  },
+  "tracks": [
+    {
+      "name": "slice 00",
+      "voice": "amen_00",
+      "default_amp": 0.85,
+      "default_pan": 0.0,
+      "default_envelope": {
+        "kind": "gate"
+      },
+      "default_duration_rows": 1.0,
+      "cells": [
+        {
+          "row": 0,
+          "note": 440.0,
+          "pitch_ratio": 1.0
+        },
+        {
+          "row": 16,
+          "note": 440.0,
+          "pitch_ratio": 1.0
+        },
+        {
+          "row": 19,
+          "note": 440.0,
+          "pitch_ratio": 1.0
+        }
+      ]
+    },
+    {
+      "name": "slice 01",
+      "voice": "amen_01",
+      "default_amp": 0.85,
+      "default_pan": 0.0,
+      "default_envelope": {
+        "kind": "gate"
+      },
+      "default_duration_rows": 1.0,
+      "cells": [
+        {
+          "row": 1,
+          "note": 440.0,
+          "pitch_ratio": 1.0
+        },
+        {
+          "row": 17,
+          "note": 440.0,
+          "pitch_ratio": 1.0
+        }
+      ]
+    },
+    {
+      "name": "slice 02",
+      "voice": "amen_02",
+      "default_amp": 0.85,
+      "default_pan": 0.0,
+      "default_envelope": {
+        "kind": "gate"
+      },
+      "default_duration_rows": 1.0,
+      "cells": [
+        {
+          "row": 2,
+          "note": 440.0,
+          "pitch_ratio": 1.0
+        },
+        {
+          "row": 18,
+          "note": 440.0,
+          "pitch_ratio": 1.0
+        },
+        {
+          "row": 26,
+          "note": 440.0,
+          "pitch_ratio": 1.0
+        }
+      ]
+    },
+    {
+      "name": "slice 03",
+      "voice": "amen_03",
+      "default_amp": 0.85,
+      "default_pan": 0.0,
+      "default_envelope": {
+        "kind": "gate"
+      },
+      "default_duration_rows": 1.0,
+      "cells": [
+        {
+          "row": 3,
+          "note": 440.0,
+          "pitch_ratio": 1.0
+        },
+        {
+          "row": 27,
+          "note": 440.0,
+          "pitch_ratio": 1.0
+        }
+      ]
+    },
+    {
+      "name": "slice 04",
+      "voice": "amen_04",
+      "default_amp": 0.85,
+      "default_pan": 0.0,
+      "default_envelope": {
+        "kind": "gate"
+      },
+      "default_duration_rows": 1.0,
+      "cells": [
+        {
+          "row": 4,
+          "note": 440.0,
+          "pitch_ratio": 1.0
+        },
+        {
+          "row": 20,
+          "note": 440.0,
+          "pitch_ratio": 1.0
+        },
+        {
+          "row": 24,
+          "note": 440.0,
+          "pitch_ratio": 1.0
+        },
+        {
+          "row": 29,
+          "note": 440.0,
+          "pitch_ratio": 1.0
+        }
+      ]
+    },
+    {
+      "name": "slice 05",
+      "voice": "amen_05",
+      "default_amp": 0.85,
+      "default_pan": 0.0,
+      "default_envelope": {
+        "kind": "gate"
+      },
+      "default_duration_rows": 1.0,
+      "cells": [
+        {
+          "row": 5,
+          "note": 440.0,
+          "pitch_ratio": 1.0
+        },
+        {
+          "row": 21,
+          "note": 440.0,
+          "pitch_ratio": 1.0
+        }
+      ]
+    },
+    {
+      "name": "slice 06",
+      "voice": "amen_06",
+      "default_amp": 0.85,
+      "default_pan": 0.0,
+      "default_envelope": {
+        "kind": "gate"
+      },
+      "default_duration_rows": 1.0,
+      "cells": [
+        {
+          "row": 6,
+          "note": 440.0,
+          "pitch_ratio": 1.0
+        }
+      ]
+    },
+    {
+      "name": "slice 07",
+      "voice": "amen_07",
+      "default_amp": 0.85,
+      "default_pan": 0.0,
+      "default_envelope": {
+        "kind": "gate"
+      },
+      "default_duration_rows": 1.0,
+      "cells": [
+        {
+          "row": 7,
+          "note": 440.0,
+          "pitch_ratio": 1.0
+        }
+      ]
+    },
+    {
+      "name": "slice 08",
+      "voice": "amen_08",
+      "default_amp": 0.85,
+      "default_pan": 0.0,
+      "default_envelope": {
+        "kind": "gate"
+      },
+      "default_duration_rows": 1.0,
+      "cells": [
+        {
+          "row": 8,
+          "note": 440.0,
+          "pitch_ratio": 1.0
+        }
+      ]
+    },
+    {
+      "name": "slice 09",
+      "voice": "amen_09",
+      "default_amp": 0.85,
+      "default_pan": 0.0,
+      "default_envelope": {
+        "kind": "gate"
+      },
+      "default_duration_rows": 1.0,
+      "cells": [
+        {
+          "row": 9,
+          "note": 440.0,
+          "pitch_ratio": 1.0
+        },
+        {
+          "row": 25,
+          "note": 440.0,
+          "pitch_ratio": 1.0
+        }
+      ]
+    },
+    {
+      "name": "slice 10",
+      "voice": "amen_10",
+      "default_amp": 0.85,
+      "default_pan": 0.0,
+      "default_envelope": {
+        "kind": "gate"
+      },
+      "default_duration_rows": 1.0,
+      "cells": [
+        {
+          "row": 10,
+          "note": 440.0,
+          "pitch_ratio": 1.0
+        },
+        {
+          "row": 22,
+          "note": 440.0,
+          "pitch_ratio": 1.0
+        }
+      ]
+    },
+    {
+      "name": "slice 11",
+      "voice": "amen_11",
+      "default_amp": 0.85,
+      "default_pan": 0.0,
+      "default_envelope": {
+        "kind": "gate"
+      },
+      "default_duration_rows": 1.0,
+      "cells": [
+        {
+          "row": 11,
+          "note": 440.0,
+          "pitch_ratio": 1.0
+        },
+        {
+          "row": 23,
+          "note": 440.0,
+          "pitch_ratio": 1.0
+        }
+      ]
+    },
+    {
+      "name": "slice 12",
+      "voice": "amen_12",
+      "default_amp": 0.85,
+      "default_pan": 0.0,
+      "default_envelope": {
+        "kind": "gate"
+      },
+      "default_duration_rows": 1.0,
+      "cells": [
+        {
+          "row": 12,
+          "note": 440.0,
+          "pitch_ratio": 1.0
+        },
+        {
+          "row": 28,
+          "note": 440.0,
+          "pitch_ratio": 1.0
+        }
+      ]
+    },
+    {
+      "name": "slice 13",
+      "voice": "amen_13",
+      "default_amp": 0.85,
+      "default_pan": 0.0,
+      "default_envelope": {
+        "kind": "gate"
+      },
+      "default_duration_rows": 1.0,
+      "cells": [
+        {
+          "row": 13,
+          "note": 440.0,
+          "pitch_ratio": 1.0
+        }
+      ]
+    },
+    {
+      "name": "slice 14",
+      "voice": "amen_14",
+      "default_amp": 0.85,
+      "default_pan": 0.0,
+      "default_envelope": {
+        "kind": "gate"
+      },
+      "default_duration_rows": 1.0,
+      "cells": [
+        {
+          "row": 14,
+          "note": 440.0,
+          "pitch_ratio": 1.0
+        },
+        {
+          "row": 30,
+          "note": 440.0,
+          "pitch_ratio": 1.0
+        }
+      ]
+    },
+    {
+      "name": "slice 15",
+      "voice": "amen_15",
+      "default_amp": 0.85,
+      "default_pan": 0.0,
+      "default_envelope": {
+        "kind": "gate"
+      },
+      "default_duration_rows": 1.0,
+      "cells": [
+        {
+          "row": 15,
+          "note": 440.0,
+          "pitch_ratio": 1.0
+        },
+        {
+          "row": 31,
+          "note": 440.0,
+          "pitch_ratio": 1.0
+        }
+      ]
+    },
+    {
+      "name": "sub",
+      "voice": "sub",
+      "default_amp": 0.5,
+      "default_pan": 0.0,
+      "default_envelope": {
+        "kind": "exp",
+        "attack": 200,
+        "tau": 9000
+      },
+      "default_duration_rows": 2.0,
+      "cells": [
+        {
+          "row": 0,
+          "note": 55.0,
+          "duration_rows": 3
+        },
+        {
+          "row": 3,
+          "note": 55.0,
+          "duration_rows": 1
+        },
+        {
+          "row": 6,
+          "note": 65.41,
+          "duration_rows": 2
+        },
+        {
+          "row": 10,
+          "note": 55.0,
+          "duration_rows": 3
+        },
+        {
+          "row": 16,
+          "note": 55.0,
+          "duration_rows": 3
+        },
+        {
+          "row": 19,
+          "note": 55.0,
+          "duration_rows": 1
+        },
+        {
+          "row": 22,
+          "note": 73.42,
+          "duration_rows": 2
+        },
+        {
+          "row": 26,
+          "note": 49.0,
+          "duration_rows": 3
+        },
+        {
+          "row": 29,
+          "note": 55.0,
+          "duration_rows": 2
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "title": "jungle amen (chopped)",
+    "author": "rtracker"
+  }
+}
