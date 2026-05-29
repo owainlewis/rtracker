@@ -310,6 +310,14 @@ fn handle_key(
         (KeyCode::Left, KeyModifiers::CONTROL) => move_pattern(app, engine, -1)?,
         (KeyCode::Right, KeyModifiers::CONTROL) => move_pattern(app, engine, 1)?,
 
+        // Pattern length (in beats) and tempo.
+        (KeyCode::Char('='), _) | (KeyCode::Char('+'), _) => change_rows(app, engine, 1)?,
+        (KeyCode::Char('-'), _) | (KeyCode::Char('_'), _) => change_rows(app, engine, -1)?,
+        (KeyCode::Char('.'), _) => change_tempo(app, engine, 1.0)?,
+        (KeyCode::Char(','), _) => change_tempo(app, engine, -1.0)?,
+        (KeyCode::Char('>'), _) => change_tempo(app, engine, 10.0)?,
+        (KeyCode::Char('<'), _) => change_tempo(app, engine, -10.0)?,
+
         // Cursor movement — manual navigation disengages playhead-follow.
         (KeyCode::Up, _)        => { app.follow_playhead = false; move_cursor_row(app, -1); }
         (KeyCode::Down, _)      => { app.follow_playhead = false; move_cursor_row(app, 1); }
@@ -521,8 +529,72 @@ fn clear_cell(app: &mut App) -> bool {
 }
 
 fn apply_edit(app: &mut App, engine: &AudioEngine) -> Result<()> {
-    re_render(app, engine)?;
+    re_render_edit(app, engine)?;
     app.dirty = true;
+    Ok(())
+}
+
+/// Re-render after a cell edit (one that doesn't change any pattern's length).
+/// In pattern scope this re-renders just the current pattern (already cheap).
+/// In song scope it re-renders ONLY the edited pattern and splices it into its
+/// region of the song buffer — exact, because each event's audio is confined to
+/// its own pattern and the mixer is purely additive (see mixer.rs). Avoids
+/// recompiling the whole song on every keystroke. Falls back to a full render
+/// if the buffer and layout don't line up (e.g. right after a scope switch).
+fn re_render_edit(app: &App, engine: &AudioEngine) -> Result<()> {
+    if app.play_scope == PlayScope::Pattern {
+        return re_render(app, engine);
+    }
+    let base = app.path.parent().unwrap_or_else(|| Path::new("."));
+    let mut p = app.cur().clone();
+    p.sample_rate = engine.device_sr;
+    let piece = p.compile().context("compile pattern")?;
+    let patch = rtracker_render::render_with_dir(&piece, base).context("render pattern")?;
+
+    let layout = app.layout(engine.device_sr);
+    let pl = &layout[app.current];
+    let start = (pl.start_frame as usize) * 2;
+    let region = (pl.len_frames as usize) * 2;
+    let cur = engine.current_buffer();
+    if patch.len() == region && start + region <= cur.len() {
+        let mut buf = cur.as_ref().clone();
+        buf[start..start + region].copy_from_slice(&patch);
+        engine.swap_buffer(buf);
+        Ok(())
+    } else {
+        re_render(app, engine)
+    }
+}
+
+/// Grow or shrink the current pattern by `delta_beats` beats (one beat =
+/// `lines_per_beat` rows). Cells that fall outside the new length are dropped.
+fn change_rows(app: &mut App, engine: &AudioEngine, delta_beats: i32) -> Result<()> {
+    let lpb = app.cur().lines_per_beat.max(1) as i32;
+    let new_rows = (app.cur().rows as i32 + lpb * delta_beats).max(lpb) as u32;
+    {
+        let p = app.cur_mut();
+        p.rows = new_rows;
+        for t in &mut p.tracks {
+            t.cells.retain(|c| c.row < new_rows);
+        }
+    }
+    clamp_cursor(app);
+    app.dirty = true;
+    engine.rewind();
+    re_render(app, engine)?; // length change shifts the song layout → full render
+    app.set_status(format!("rows {}", new_rows), StatusKind::Info);
+    Ok(())
+}
+
+/// Nudge the current pattern's tempo. Per-pattern tempo is allowed; note that
+/// changing it desyncs any fixed-length sample slices from the row grid.
+fn change_tempo(app: &mut App, engine: &AudioEngine, delta: f32) -> Result<()> {
+    let new = (app.cur().tempo_bpm + delta).clamp(20.0, 999.0);
+    app.cur_mut().tempo_bpm = new;
+    app.dirty = true;
+    engine.rewind();
+    re_render(app, engine)?;
+    app.set_status(format!("{:.0} BPM", new), StatusKind::Info);
     Ok(())
 }
 
@@ -712,6 +784,8 @@ fn draw_footer(f: &mut ratatui::Frame, area: Rect, _app: &App) {
         ("n/N", "new/clone"),
         ("x", "del"),
         ("^←→", "reorder"),
+        ("-/=", "len"),
+        (",/.", "bpm"),
         ("m", "scope"),
         ("Space", "play"),
         ("s", "save"),
