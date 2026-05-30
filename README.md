@@ -45,6 +45,10 @@ cargo run -p rtracker-cli -- render-pattern pattern.json out.wav --loops 4
 # Compile / render a song (array of patterns)
 cargo run -p rtracker-cli -- render-song song.json out.wav
 
+# Chop a WAV into slices → a pattern (one track per slice, laid out in order)
+cargo run -p rtracker-cli -- slice break.wav break.json --slices 16
+cargo run -p rtracker-cli -- slice break.wav break.json --transient   # cut on onsets
+
 # Import a 4-channel ProTracker MOD to a pattern + extracted sample WAVs
 cargo run -p rtracker-cli -- import-mod tune.mod tune.json
 
@@ -56,6 +60,29 @@ cargo run -p rtracker-cli -- tui pattern.json
 ```
 
 See `examples/` for sample pattern, song, and piece JSON.
+
+## Chopping samples
+
+Rather than cutting a break into separate files, `slice` stores slice points as
+`(start, end)` offsets into one WAV — non-destructive and reversible. Two modes:
+
+- **Equal division** (`--slices N`): N evenly-spaced cuts. The default grid
+  tempo makes the slices play back gaplessly (one slice per row), so rendering
+  the result straight back reproduces the source. Ideal for breakbeats.
+- **Transient detection** (`--transient`): finds onsets by short-time energy and
+  cuts on the attacks; `--threshold` / `--min-gap-ms` tune sensitivity.
+
+Open the sliced pattern in the TUI and reorder the rows to chop the break. Every
+slice boundary is edge-faded automatically (see "declick" in `render/mixer.rs`)
+so reordered cuts don't click.
+
+The `squarepusher` example builds a full chopped-Amen drill'n'bass song on top
+of the slicer — reordered 16th-note hits, retriggers, reversed tails, comb-
+smeared breakdown, and sped-up fills over a fast jazzy sub:
+
+```sh
+cargo run -p rtracker-cli --example squarepusher   # → out/squarepusher.wav
+```
 
 ## TUI keys
 

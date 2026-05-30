@@ -6,6 +6,7 @@ use clap::{Parser, Subcommand};
 mod engine;
 mod mod_import;
 mod playback;
+mod slice;
 mod tui;
 
 use rtracker_core::{Pattern, Piece, Song};
@@ -47,6 +48,31 @@ enum Cmd {
     CompileSong { input: PathBuf, output: PathBuf },
     /// Compile a song and render it to WAV in one step.
     RenderSong { input: PathBuf, output: PathBuf },
+    /// Chop a WAV into slices and emit a tracker pattern (one track per slice).
+    Slice {
+        input: PathBuf,
+        output: PathBuf,
+        /// Number of equal slices (ignored with --transient).
+        #[arg(long, default_value_t = 16)]
+        slices: u32,
+        /// Cut on detected onsets (drum hits) instead of even spacing.
+        #[arg(long)]
+        transient: bool,
+        /// Onset sensitivity for --transient (higher = fewer slices).
+        #[arg(long, default_value_t = 1.6)]
+        threshold: f32,
+        /// Minimum spacing between onsets in ms for --transient.
+        #[arg(long, default_value_t = 40.0)]
+        min_gap_ms: f32,
+        /// Force grid tempo (default: slices play back gaplessly).
+        #[arg(long)]
+        bpm: Option<f32>,
+        #[arg(long, default_value_t = 4)]
+        lines_per_beat: u32,
+        /// Piece sample rate (default: the WAV's native rate).
+        #[arg(long)]
+        sample_rate: Option<u32>,
+    },
     /// Import a simple 4-channel ProTracker MOD as a pattern JSON plus WAV samples.
     ImportMod {
         input: PathBuf,
@@ -77,6 +103,12 @@ fn main() -> Result<()> {
         Cmd::RenderPattern { input, output, loops } => render_pattern_cmd(input, output, loops),
         Cmd::CompileSong { input, output } => compile_song_cmd(input, output),
         Cmd::RenderSong { input, output } => render_song_cmd(input, output),
+        Cmd::Slice {
+            input, output, slices, transient, threshold, min_gap_ms, bpm, lines_per_beat, sample_rate,
+        } => slice_cmd(
+            input, output,
+            slice::SliceOpts { slices, transient, threshold, min_gap_ms, bpm, lines_per_beat, sample_rate },
+        ),
         Cmd::ImportMod { input, output, samples_dir } => import_mod_cmd(input, output, samples_dir),
         Cmd::Loop { input } => playback::run(input),
         Cmd::Tui { input } => tui::run(input),
@@ -156,6 +188,19 @@ fn render_song_cmd(input: PathBuf, output: PathBuf) -> Result<()> {
     let buf = rtracker_render::render_with_dir(&piece, base)?;
     rtracker_render::write_stereo_f32(&output, piece.sample_rate, &buf)?;
     tracing::info!(path = %output.display(), "wrote wav");
+    Ok(())
+}
+
+fn slice_cmd(input: PathBuf, output: PathBuf, opts: slice::SliceOpts) -> Result<()> {
+    let pat = slice::slice_to_pattern(&input, &output, &opts).context("slice wav")?;
+    tracing::info!(
+        slices = pat.tracks.len(),
+        rows = pat.rows,
+        tempo_bpm = pat.tempo_bpm,
+        mode = if opts.transient { "transient" } else { "equal" },
+        path = %output.display(),
+        "wrote sliced pattern"
+    );
     Ok(())
 }
 
