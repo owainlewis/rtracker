@@ -12,9 +12,10 @@ use std::collections::HashMap;
 use std::path::{Path, PathBuf};
 use std::sync::Arc;
 
-use hound::SampleFormat;
 use rtracker_core::Piece;
 use thiserror::Error;
+
+use crate::wav::{decode_wav_mono, UnsupportedBits};
 
 #[derive(Debug, Default)]
 pub struct SampleBank {
@@ -74,42 +75,10 @@ impl SampleBank {
 fn read_wav_as_mono(id: &str, path: &Path) -> Result<Vec<f32>, SampleLoadError> {
     let reader = hound::WavReader::open(path)
         .map_err(|e| SampleLoadError::Read { id: id.into(), path: path.into(), source: e })?;
-    let spec = reader.spec();
-    let channels = spec.channels as usize;
-    let interleaved: Vec<f32> = match spec.sample_format {
-        SampleFormat::Float => reader
-            .into_samples::<f32>()
-            .filter_map(Result::ok)
-            .collect(),
-        SampleFormat::Int => match spec.bits_per_sample {
-            16 => reader.into_samples::<i16>().filter_map(Result::ok)
-                .map(|s| s as f32 / i16::MAX as f32).collect(),
-            24 | 32 => {
-                let max = (1i64 << (spec.bits_per_sample - 1)) as f32;
-                reader.into_samples::<i32>().filter_map(Result::ok)
-                    .map(|s| s as f32 / max).collect()
-            }
-            // 8-bit PCM in WAV is unsigned: 0..=255 with silence at 128.
-            // hound yields these as i8 (it subtracts the 128 bias for us), so a
-            // plain i8 → [-1, 1] scaling is correct. Reading as i16 and dividing
-            // by i8::MAX left a large DC offset on every 8-bit file.
-            8 => reader.into_samples::<i8>().filter_map(Result::ok)
-                .map(|s| s as f32 / i8::MAX as f32).collect(),
-            bits => return Err(SampleLoadError::UnsupportedBits { id: id.into(), bits }),
-        },
-    };
-    if channels <= 1 {
-        return Ok(interleaved);
-    }
-    let frames = interleaved.len() / channels;
-    let mut mono = Vec::with_capacity(frames);
-    for f in 0..frames {
-        let mut sum = 0.0f32;
-        for c in 0..channels {
-            sum += interleaved[f * channels + c];
-        }
-        mono.push(sum / channels as f32);
-    }
+    // The piece's rate drives playback; the sample's native rate is ignored
+    // (no resampling — see module docs).
+    let (mono, _native_rate) = decode_wav_mono(reader)
+        .map_err(|UnsupportedBits(bits)| SampleLoadError::UnsupportedBits { id: id.into(), bits })?;
     Ok(mono)
 }
 

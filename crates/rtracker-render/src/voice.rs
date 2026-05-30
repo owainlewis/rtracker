@@ -62,10 +62,7 @@ fn render_sine(event: &Event, sample_rate: u32, out: &mut [f32]) {
         let f = freq_at(event, i as u64);
         let dt = TAU * f / sr;
         *s = phase.sin();
-        phase += dt;
-        if phase > TAU {
-            phase -= TAU;
-        }
+        phase = wrap_tau(phase + dt);
     }
 }
 
@@ -88,10 +85,7 @@ fn render_sine_partials(
             let f = fund * *p;
             let dt = TAU * f / sr;
             *s += (amplitudes[k] / norm) * phases[k].sin();
-            phases[k] += dt;
-            if phases[k] > TAU {
-                phases[k] -= TAU;
-            }
+            phases[k] = wrap_tau(phases[k] + dt);
         }
     }
 }

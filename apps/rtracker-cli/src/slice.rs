@@ -237,33 +237,8 @@ fn detect_onsets(mono: &[f32], sr: u32, threshold: f32, min_gap_ms: f32) -> Vec<
 fn read_wav_mono(path: &Path) -> Result<(Vec<f32>, u32)> {
     let reader = hound::WavReader::open(path)
         .with_context(|| format!("opening {}", path.display()))?;
-    let spec = reader.spec();
-    let channels = spec.channels.max(1) as usize;
-    let interleaved: Vec<f32> = match spec.sample_format {
-        hound::SampleFormat::Float => reader.into_samples::<f32>().filter_map(Result::ok).collect(),
-        hound::SampleFormat::Int => match spec.bits_per_sample {
-            16 => reader.into_samples::<i16>().filter_map(Result::ok)
-                .map(|s| s as f32 / i16::MAX as f32).collect(),
-            24 | 32 => {
-                let max = (1i64 << (spec.bits_per_sample - 1)) as f32;
-                reader.into_samples::<i32>().filter_map(Result::ok)
-                    .map(|s| s as f32 / max).collect()
-            }
-            8 => reader.into_samples::<i8>().filter_map(Result::ok)
-                .map(|s| s as f32 / i8::MAX as f32).collect(),
-            bits => bail!("unsupported bits_per_sample {bits} in {}", path.display()),
-        },
-    };
-    if channels <= 1 {
-        return Ok((interleaved, spec.sample_rate));
-    }
-    let frames = interleaved.len() / channels;
-    let mut mono = Vec::with_capacity(frames);
-    for f in 0..frames {
-        let sum: f32 = (0..channels).map(|c| interleaved[f * channels + c]).sum();
-        mono.push(sum / channels as f32);
-    }
-    Ok((mono, spec.sample_rate))
+    rtracker_render::decode_wav_mono(reader)
+        .map_err(|e| anyhow::anyhow!("{e} in {}", path.display()))
 }
 
 fn output_dir(output: &Path) -> &Path {
