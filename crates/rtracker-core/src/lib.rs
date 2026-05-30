@@ -152,6 +152,8 @@ pub enum FxNode {
 
 #[derive(Debug, Error)]
 pub enum ValidationError {
+    #[error("piece sample_rate is zero")]
+    ZeroSampleRate,
     #[error("event {index} references unknown voice '{voice}'")]
     UnknownVoice { index: usize, voice: String },
     #[error("event {index} ends at {end} which is past piece duration {duration}")]
@@ -176,6 +178,9 @@ pub enum ValidationError {
 
 impl Piece {
     pub fn validate(&self) -> Result<(), ValidationError> {
+        if self.sample_rate == 0 {
+            return Err(ValidationError::ZeroSampleRate);
+        }
         for (name, v) in &self.voices {
             match v {
                 VoiceDef::Sample { sample_id, .. } => {
@@ -279,6 +284,19 @@ mod tests {
         let p2: Piece = serde_json::from_str(&s).unwrap();
         assert_eq!(p2.events.len(), 1);
         p2.validate().unwrap();
+    }
+
+    #[test]
+    fn validation_rejects_zero_sample_rate() {
+        let p = Piece {
+            sample_rate: 0,
+            duration_samples: 1000,
+            voices: HashMap::new(),
+            samples: HashMap::new(),
+            events: vec![],
+            metadata: PieceMetadata::default(),
+        };
+        assert!(matches!(p.validate(), Err(ValidationError::ZeroSampleRate)));
     }
 
     #[test]

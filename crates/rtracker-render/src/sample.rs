@@ -89,7 +89,11 @@ fn read_wav_as_mono(id: &str, path: &Path) -> Result<Vec<f32>, SampleLoadError> 
                 reader.into_samples::<i32>().filter_map(Result::ok)
                     .map(|s| s as f32 / max).collect()
             }
-            8 => reader.into_samples::<i16>().filter_map(Result::ok)
+            // 8-bit PCM in WAV is unsigned: 0..=255 with silence at 128.
+            // hound yields these as i8 (it subtracts the 128 bias for us), so a
+            // plain i8 → [-1, 1] scaling is correct. Reading as i16 and dividing
+            // by i8::MAX left a large DC offset on every 8-bit file.
+            8 => reader.into_samples::<i8>().filter_map(Result::ok)
                 .map(|s| s as f32 / i8::MAX as f32).collect(),
             bits => return Err(SampleLoadError::UnsupportedBits { id: id.into(), bits }),
         },
@@ -183,6 +187,52 @@ mod tests {
         assert_eq!(loaded.len(), 2);
         assert!((loaded[0] - 1024.0 / i16::MAX as f32).abs() < 1e-6);
         assert!((loaded[1] - 2048.0 / i16::MAX as f32).abs() < 1e-6);
+
+        let _ = std::fs::remove_dir_all(dir);
+    }
+
+    #[test]
+    fn eight_bit_wav_decodes_centered_without_dc_offset() {
+        let dir = temp_test_dir();
+        std::fs::create_dir_all(&dir).expect("create temp dir");
+        let wav = dir.join("eight.wav");
+
+        // 8-bit PCM stores unsigned bytes (silence at 128). hound applies the
+        // bias for us when we write/read i8, so silence must come back ~0.0, not
+        // pinned near +1.0 as the old i16-based path produced.
+        let spec = WavSpec {
+            channels: 1,
+            sample_rate: 48000,
+            bits_per_sample: 8,
+            sample_format: SampleFormat::Int,
+        };
+        let mut writer = WavWriter::create(&wav, spec).expect("create wav");
+        for s in [0i8, 64, -64, 127, -127] {
+            writer.write_sample(s).expect("write sample");
+        }
+        writer.finalize().expect("finalize wav");
+
+        let mut samples = HashMap::new();
+        samples.insert(
+            "s".into(),
+            SampleRef { path: wav.file_name().unwrap().into(), start_sample: 0, end_sample: 0, label: None },
+        );
+        let piece = Piece {
+            sample_rate: 48000,
+            duration_samples: 100,
+            voices: HashMap::new(),
+            samples,
+            events: vec![],
+            metadata: PieceMetadata::default(),
+        };
+
+        let bank = SampleBank::load(&piece, &dir).expect("load sample bank");
+        let loaded = bank.samples.get("s").expect("sample exists");
+        assert_eq!(loaded.len(), 5);
+        assert!(loaded[0].abs() < 1e-6, "silence (0) must decode to ~0, got {}", loaded[0]);
+        assert!((loaded[1] - 64.0 / i8::MAX as f32).abs() < 1e-6);
+        assert!((loaded[2] - (-64.0) / i8::MAX as f32).abs() < 1e-6);
+        assert!((loaded[3] - 1.0).abs() < 1e-6);
 
         let _ = std::fs::remove_dir_all(dir);
     }

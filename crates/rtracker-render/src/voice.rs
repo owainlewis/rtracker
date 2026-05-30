@@ -22,7 +22,9 @@ pub fn render_voice(def: &VoiceDef, event: &Event, ctx: &VoiceCtx, out: &mut [f3
                 None => silence(out),
             }
         }
-        VoiceDef::Fm { .. } => silence(out),
+        VoiceDef::Fm { modulator_ratio, modulation_index, .. } => {
+            render_fm(event, ctx.sample_rate, *modulator_ratio, *modulation_index, out)
+        }
     }
 }
 
@@ -94,6 +96,36 @@ fn render_sine_partials(
     }
 }
 
+/// Two-operator FM: a single modulator sine phase-modulates a carrier sine.
+/// `modulator_ratio` is the modulator frequency relative to the carrier;
+/// `modulation_index` is the peak phase deviation in radians. The carrier
+/// frequency tracks the event's pitch envelope.
+fn render_fm(
+    event: &Event,
+    sample_rate: u32,
+    modulator_ratio: f32,
+    modulation_index: f32,
+    out: &mut [f32],
+) {
+    let sr = sample_rate as f32;
+    let mut carrier_phase = 0.0f32;
+    let mut mod_phase = 0.0f32;
+    for (i, s) in out.iter_mut().enumerate() {
+        let f = freq_at(event, i as u64);
+        *s = (carrier_phase + modulation_index * mod_phase.sin()).sin();
+        carrier_phase = wrap_tau(carrier_phase + TAU * f / sr);
+        mod_phase = wrap_tau(mod_phase + TAU * f * modulator_ratio / sr);
+    }
+}
+
+fn wrap_tau(phase: f32) -> f32 {
+    if phase > TAU {
+        phase - TAU
+    } else {
+        phase
+    }
+}
+
 fn render_noise_bandpass(event: &Event, sample_rate: u32, q: f32, out: &mut [f32]) {
     let center = event.freq.unwrap_or(1000.0);
     let mut rng = XorShift::new(event.t.wrapping_add(0x9E37_79B9_7F4A_7C15));
@@ -111,10 +143,30 @@ fn render_sample(event: &Event, src: &[f32], loop_mode: SampleLoopMode, out: &mu
     }
     let pitch_ratio = event.pitch_ratio.unwrap_or(1.0).max(0.001) as f64;
     let len = src.len();
+    // A one-sample source can't be interpolated or folded — just hold it.
+    if len == 1 {
+        for s in out.iter_mut() {
+            *s = src[0];
+        }
+        return;
+    }
     let mut pos = 0.0f64;
     for s in out.iter_mut() {
-        let i_lo = pos.floor() as usize;
-        let frac = (pos - pos.floor()) as f32;
+        let (i_lo, frac) = match loop_mode {
+            SampleLoopMode::OneShot => (pos.floor() as usize, (pos - pos.floor()) as f32),
+            SampleLoopMode::Loop => {
+                let p = pos % len as f64;
+                (p.floor() as usize, (p - p.floor()) as f32)
+            }
+            SampleLoopMode::PingPong => {
+                // Fold position into a triangle over [0, len-1]: forward then
+                // backward, so the loop reverses at each end instead of jumping.
+                let period = 2.0 * (len - 1) as f64;
+                let q = pos % period;
+                let folded = if q <= (len - 1) as f64 { q } else { period - q };
+                (folded.floor() as usize, (folded - folded.floor()) as f32)
+            }
+        };
         let (a, b) = match loop_mode {
             SampleLoopMode::OneShot => {
                 if i_lo + 1 >= len {
@@ -123,12 +175,9 @@ fn render_sample(event: &Event, src: &[f32], loop_mode: SampleLoopMode, out: &mu
                     (src[i_lo], src[i_lo + 1])
                 }
             }
-            SampleLoopMode::Loop | SampleLoopMode::PingPong => {
-                // PingPong currently degrades to forward Loop — Phase 2-and-a-half.
-                let a = src[i_lo % len];
-                let b = src[(i_lo + 1) % len];
-                (a, b)
-            }
+            // Looping modes keep i_lo in range; the next sample wraps/clamps.
+            SampleLoopMode::Loop => (src[i_lo % len], src[(i_lo + 1) % len]),
+            SampleLoopMode::PingPong => (src[i_lo.min(len - 1)], src[(i_lo + 1).min(len - 1)]),
         };
         *s = a * (1.0 - frac) + b * frac;
         pos += pitch_ratio;
@@ -210,6 +259,45 @@ mod tests {
         let mut buf = vec![0.0; 4800];
         render_voice(&def, &ev(1000.0, 4800), &empty_ctx(), &mut buf);
         assert!(nonzero(&buf));
+    }
+
+    #[test]
+    fn fm_voice_produces_bounded_signal() {
+        let def = VoiceDef::Fm { modulator_ratio: 2.0, modulation_index: 3.0, default_pan: 0.0 };
+        let mut buf = vec![0.0; 4800];
+        render_voice(&def, &ev(220.0, 4800), &empty_ctx(), &mut buf);
+        assert!(nonzero(&buf));
+        assert!(buf.iter().all(|s| s.abs() <= 1.0001));
+    }
+
+    #[test]
+    fn fm_zero_index_is_a_plain_sine() {
+        // With modulation_index 0 the carrier is unmodulated, so it must match a
+        // plain sine of the same frequency.
+        let def = VoiceDef::Fm { modulator_ratio: 2.0, modulation_index: 0.0, default_pan: 0.0 };
+        let mut fm = vec![0.0; 480];
+        render_voice(&def, &ev(440.0, 480), &empty_ctx(), &mut fm);
+        let mut sine = vec![0.0; 480];
+        render_sine(&ev(440.0, 480), 48000, &mut sine);
+        for (a, b) in fm.iter().zip(sine.iter()) {
+            assert!((a - b).abs() < 1e-5);
+        }
+    }
+
+    #[test]
+    fn pingpong_reverses_at_the_end() {
+        // A monotonically rising ramp played at 2× should run up to the end and
+        // then come back down, rather than jumping back to the start.
+        let src: Vec<f32> = (0..8).map(|i| i as f32).collect();
+        let mut out = vec![0.0; 16];
+        let mut e = ev(0.0, 16);
+        e.pitch_ratio = Some(2.0);
+        render_sample(&e, &src, SampleLoopMode::PingPong, &mut out);
+        // It rises, peaks near the top, then descends — so the max is interior,
+        // not at the final sample.
+        let max_idx = out.iter().enumerate().max_by(|a, b| a.1.partial_cmp(b.1).unwrap()).unwrap().0;
+        assert!(max_idx < out.len() - 1, "expected interior peak, got idx {max_idx}");
+        assert!(*out.last().unwrap() < out[max_idx], "tail should descend after the fold");
     }
 
     #[test]

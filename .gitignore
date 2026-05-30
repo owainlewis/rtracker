@@ -1,5 +1,17 @@
 /target
 /samples
+.DS_Store
+
+# Rendered audio (keep curated example WAVs)
 *.wav
 !examples/**/*.wav
-.DS_Store
+
+# Generated render output
+/out
+
+# Local generator scratch — this project is Rust-only
+examples/*.py
+
+# Large generated example pieces/songs — regenerate from sources
+examples/jungle_song.json
+examples/snares_aphex_squarepusher.json

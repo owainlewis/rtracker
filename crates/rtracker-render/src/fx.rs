@@ -1,14 +1,29 @@
 use rtracker_core::FxNode;
 
-pub fn apply_fx(node: &FxNode, buf: &mut [f32], _sample_rate: u32) {
+use crate::dsp::Biquad;
+
+pub fn apply_fx(node: &FxNode, buf: &mut [f32], sample_rate: u32) {
     match *node {
         FxNode::Bitcrush { bits } => bitcrush(buf, bits),
         FxNode::Reverse => buf.reverse(),
         FxNode::SampleRateReduce { factor } => sample_rate_reduce(buf, factor),
         FxNode::Stutter { slice_samples, repeats } => stutter(buf, slice_samples, repeats),
         FxNode::CombDelay { delay_samples, feedback } => comb_delay(buf, delay_samples, feedback),
-        // Filter FX — types defined, DSP deferred.
-        FxNode::Highpass { .. } | FxNode::Lowpass { .. } | FxNode::Bandpass { .. } => {}
+        FxNode::Lowpass { cutoff_hz, q } => {
+            biquad(buf, Biquad::lowpass(sample_rate as f32, cutoff_hz, q))
+        }
+        FxNode::Highpass { cutoff_hz, q } => {
+            biquad(buf, Biquad::highpass(sample_rate as f32, cutoff_hz, q))
+        }
+        FxNode::Bandpass { center_hz, q } => {
+            biquad(buf, Biquad::bandpass(sample_rate as f32, center_hz, q))
+        }
+    }
+}
+
+fn biquad(buf: &mut [f32], mut filter: Biquad) {
+    for s in buf.iter_mut() {
+        *s = filter.process(*s);
     }
 }
 
@@ -98,6 +113,43 @@ mod tests {
         assert!((b[5] - 0.5).abs() < 1e-6);
         assert!((b[10] - 0.25).abs() < 1e-6);
         assert!((b[15] - 0.125).abs() < 1e-6);
+    }
+
+    /// RMS of a unit sine at `freq` after passing through `node`. Used to check
+    /// that filters pass/reject the bands they should.
+    fn filtered_rms(node: FxNode, freq: f32, sr: u32) -> f32 {
+        use std::f32::consts::TAU;
+        let n = sr as usize; // one second
+        let mut buf: Vec<f32> = (0..n).map(|i| (TAU * freq * i as f32 / sr as f32).sin()).collect();
+        apply_fx(&node, &mut buf, sr);
+        // Skip the filter's startup transient.
+        let tail = &buf[sr as usize / 10..];
+        (tail.iter().map(|s| s * s).sum::<f32>() / tail.len() as f32).sqrt()
+    }
+
+    #[test]
+    fn lowpass_attenuates_above_cutoff_and_passes_below() {
+        let low = filtered_rms(FxNode::Lowpass { cutoff_hz: 1000.0, q: 0.707 }, 100.0, 48000);
+        let high = filtered_rms(FxNode::Lowpass { cutoff_hz: 1000.0, q: 0.707 }, 10000.0, 48000);
+        assert!(low > 0.6, "low tone should pass, rms {low}");
+        assert!(high < 0.1, "high tone should be cut, rms {high}");
+    }
+
+    #[test]
+    fn highpass_attenuates_below_cutoff_and_passes_above() {
+        let low = filtered_rms(FxNode::Highpass { cutoff_hz: 1000.0, q: 0.707 }, 100.0, 48000);
+        let high = filtered_rms(FxNode::Highpass { cutoff_hz: 1000.0, q: 0.707 }, 10000.0, 48000);
+        assert!(high > 0.6, "high tone should pass, rms {high}");
+        assert!(low < 0.1, "low tone should be cut, rms {low}");
+    }
+
+    #[test]
+    fn bandpass_passes_center_rejects_far_bands() {
+        let node = FxNode::Bandpass { center_hz: 1000.0, q: 2.0 };
+        let center = filtered_rms(node, 1000.0, 48000);
+        let below = filtered_rms(node, 60.0, 48000);
+        let above = filtered_rms(node, 12000.0, 48000);
+        assert!(center > below * 3.0 && center > above * 3.0, "center {center} below {below} above {above}");
     }
 
     #[test]

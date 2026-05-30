@@ -26,13 +26,20 @@ pub fn render(piece: &Piece) -> Result<Vec<f32>, RenderError> {
 
 /// Render, resolving any sample paths relative to `base_dir`.
 pub fn render_with_dir(piece: &Piece, base_dir: &Path) -> Result<Vec<f32>, RenderError> {
+    // Validate before touching the filesystem so a malformed piece fails fast
+    // with a validation error rather than a sample-load error. `render_with_bank`
+    // does not re-validate.
     piece.validate()?;
     let bank = SampleBank::load(piece, base_dir)?;
-    render_with_bank(piece, &bank)
+    render_with_bank_unchecked(piece, &bank)
 }
 
 pub fn render_with_bank(piece: &Piece, bank: &SampleBank) -> Result<Vec<f32>, RenderError> {
     piece.validate()?;
+    render_with_bank_unchecked(piece, bank)
+}
+
+fn render_with_bank_unchecked(piece: &Piece, bank: &SampleBank) -> Result<Vec<f32>, RenderError> {
     let total = (piece.duration_samples as usize) * 2;
     let mut master = vec![0.0f32; total];
     let ctx = VoiceCtx { sample_rate: piece.sample_rate, bank };
@@ -66,6 +73,7 @@ fn mix_event(voice: &VoiceDef, event: &Event, ctx: &VoiceCtx, master: &mut [f32]
     for s in buf.iter_mut() {
         *s *= event.amp;
     }
+    declick(&mut buf, ctx.sample_rate);
 
     let (lg, rg) = pan_gains(event.pan);
     let start = event.t as usize * 2;
@@ -77,6 +85,25 @@ fn mix_event(voice: &VoiceDef, event: &Event, ctx: &VoiceCtx, master: &mut [f32]
         master[mi + 1] += buf[bi] * rg;
         bi += 1;
         mi += 2;
+    }
+}
+
+/// Short linear fade at both edges of an event's buffer. Without it, a one-shot
+/// sample cut off mid-waveform (e.g. a `gate` Amen chop truncated to one row) or
+/// a note that starts/ends off a zero crossing leaves a step discontinuity when
+/// summed into the master bus — heard as a broadband click ("blip"). A ~2.5 ms
+/// ramp is inaudible against the transient but removes the click.
+fn declick(buf: &mut [f32], sample_rate: u32) {
+    let n = buf.len();
+    if n < 4 {
+        return;
+    }
+    // ~2.5 ms, clamped so a very short event still fades cleanly.
+    let fade = ((sample_rate as usize) / 400).clamp(1, n / 2);
+    for i in 0..fade {
+        let g = (i as f32 + 0.5) / fade as f32;
+        buf[i] *= g;
+        buf[n - 1 - i] *= g;
     }
 }
 
@@ -107,6 +134,19 @@ mod tests {
         assert!((l - 1.0).abs() < 1e-6 && r.abs() < 1e-6);
         let (l, r) = pan_gains(1.0);
         assert!(l.abs() < 1e-6 && (r - 1.0).abs() < 1e-6);
+    }
+
+    #[test]
+    fn declick_ramps_edges_to_near_zero() {
+        let mut buf = vec![1.0f32; 4800]; // 100 ms @ 48k
+        declick(&mut buf, 48000);
+        // Edges are pulled down; the body is untouched.
+        assert!(buf[0] < 0.05);
+        assert!(buf[buf.len() - 1] < 0.05);
+        assert!((buf[2400] - 1.0).abs() < 1e-6);
+        // No step larger than one fade increment anywhere along the ramp.
+        let max_jump = buf.windows(2).map(|w| (w[1] - w[0]).abs()).fold(0.0, f32::max);
+        assert!(max_jump < 0.02, "max jump {max_jump}");
     }
 
     #[test]
