@@ -93,6 +93,15 @@ Dm7 → G7 → Cmaj7 → Am7 progression with a reversed-break breakdown:
 cargo run -p rtracker-cli --example intelligent_jungle   # → out/intelligent_jungle.wav
 ```
 
+The `squarepusher_jungle` example remixes that bed in Squarepusher style: the
+same jazzy harmony, but the drums run through stutter rolls, bitcrush/sample-
+rate mangling, reversed slabs and pitch-fill flams — drums mixed down so the
+pads breathe, with a `glassy_bell` arpeggio and an `aphex_pluck` lead on top:
+
+```sh
+cargo run -p rtracker-cli --example squarepusher_jungle   # → out/squarepusher_jungle.wav
+```
+
 ## TUI keys
 
 | Key        | Action                              |
