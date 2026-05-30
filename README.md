@@ -84,6 +84,15 @@ smeared breakdown, and sped-up fills over a fast jazzy sub:
 cargo run -p rtracker-cli --example squarepusher   # → out/squarepusher.wav
 ```
 
+The `intelligent_jungle` example is the other end of the spectrum — old-school
+LTJ Bukem-style jungle: the same break left *rolling* (slices mostly in order)
+under a bed of lush `warm_pad` 7th-chords and a deep clean sub, through a jazzy
+Dm7 → G7 → Cmaj7 → Am7 progression with a reversed-break breakdown:
+
+```sh
+cargo run -p rtracker-cli --example intelligent_jungle   # → out/intelligent_jungle.wav
+```
+
 ## TUI keys
 
 | Key        | Action                              |
